@@ -1,0 +1,31 @@
+name: Compile LaTeX document
+on:
+  push:
+    branches:    
+      - main       
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+          args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=TCC.pdf main.tex"
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Davi Marcon
+          author_email: davijosuemarcon@gmail.com
+          message: 'Using bot :robot: to produce pdf from latex'
+          add: '*.pdf'
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          clean: false
+          ref: main
+
