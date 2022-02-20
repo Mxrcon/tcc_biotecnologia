@@ -139,32 +139,32 @@
 % Informações de dados para CAPA, FOLHA DE ROSTO e FICHA CATALOGRÁFICA
 % ---
 \universidade{UNIVERSIDADE FEDERAL DO PARÁ}
-\instituto{INSTITUTO DE CIÊNCIAS EXATAS E NATURAIS}
-\faculdade{FACULDADE DE COMPUTAÇÃO}
-\curso{CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
-\titulo{TÍTULO DA MONOGRAFIA}
-\autor{NOME SOBRENOME}
+\instituto{INSTITUTO DE CIÊNCIAS BIOLÓGICAS}
+\faculdade{FACULDADE DE BIOTECNOLOGIA}
+\curso{CURSO DE BACHARELADO EM BIOTECNOLOGIA}
+\titulo{Predição funcional de genes de resistência em \it{Corynebacterium pseudotuberculosis biovar equi} após indução da resistência a rifampicina e enrofloxacina}
+\autor{DAVI JOSUÉ MARCON}
 \local{Belém}
-\data{2017}
-\orientador{Prof. Dr. Nome Sobrenome}
+\data{2022}
+\orientador{Prof. Dr. Rafael Azevedo Baaúna}
 \tipotrabalho{Monografia}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Trabalho de Conclusão de Curso apresentado para obtenção do grau de Bacharel em Ciência da Computação.}
-\sobrenome{Sobrenome}
-\nome{Nome}
+\preambulo{Trabalho de Conclusão de Curso apresentado para obtenção do grau de Bacharel em Biotecnologia.}
+\sobrenome{Marcon}
+\nome{Davi}
 \palavraschave{%
-1. Bioinformática.
-2. Curadoria de genomas.
-3. Fechamento de gaps.
+1. Bioinformática.%TODO
+2. Curadoria de genomas. %TODO
+3. Fechamento de gaps. %TODO
 }
-\datadadefesa{Data da Defesa: 09 de Março de 2017}%07 de Dezembro de 2016}
-\conceito{Conceito: Excelente}
+\datadadefesa{Data da Defesa: }%TODO
+\conceito{Conceito: }%TODO
 \faculdadedoorientador{Faculdade de Biotecnologia - UFPA}
-\primeiromembrodabanca{Prof. Dr. Nome Sobrenome}
-\faculdadedoprimeiromembrodabanca{Faculdade de Computação - UFPA}
-\segundomembrodabanca{Prof. Dra. Nome Sobrenome}
-\faculdadedosegundomembrodabanca{Faculdade de Biotecnologia - UFPA}
+\primeiromembrodabanca{Prof. Dr. Nome Sobrenome} %TODO
+\faculdadedoprimeiromembrodabanca{Faculdade de Computação - UFPA}$ $%TODO
+\segundomembrodabanca{Prof. Dra. Nome Sobrenome}%TODO
+\faculdadedosegundomembrodabanca{Faculdade de Biotecnologia - UFPA}%TODO
 % ---
 
 
@@ -300,11 +300,9 @@
 % ---
 % Agradecimentos
 % ---
-\begin{agradecimentos}
 
 \include{pre-textuais/02_agradecimentos}
 
-\end{agradecimentos}
 % ---
 
 % ---
@@ -344,220 +342,26 @@
 % ----------------------------------------------------------
 \textual
 
+
+
+
+
 % ----------------------------------------------------------
 % Introdução
 % ----------------------------------------------------------
-\chapter{Introdução}
-\label{cap:introducao}
-
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
-exemplifica a elaboração de trabalho acadêmico (tese, dissertação e outros do
-gênero) produzido conforme a ABNT NBR 14724:2011 \emph{Informação e documentação
-- Trabalhos acadêmicos - Apresentação}.
-
-A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
-
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://www.abntex.net.br/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
-
-Encorajamos que sejam realizadas customizações específicas deste exemplo para
-universidades e outras instituições --- como capas, folha de aprovação, etc.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações.
-Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
-incompatíveis com as customizações promovidas. Consulte
-\citeonline{abntex2-wiki-como-customizar} par mais informações.
-
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}. 
-
-Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
-você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica.
-
-Equipe \abnTeX 
-
-Lauro César Araujo
-
-\section{Contexto}
-
-\section{Justificativa}
-
-\section{Objetivos}
-
-\subsection{Objetivo Geral}
-
-\subsection{Objetivos Específicos}
-
-\section{Metodologia}
-
-\section{Estrutura do Trabalho}
-
-% ---
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
-% ---
-\include{abntex2-modelo-include-comandos}
-% ---
-
+\include{textuais/00_introdução.tex}
 % ----------------------------------------------------------
 % Referenciais Teóricos
 % ----------------------------------------------------------
-\chapter{Referenciais Teóricos}
-\label{cap:referenciais_teoricos}
-
-% ---
-\section{Aliquam vestibulum fringilla lorem}
-% ---
-
-\begin{figure}[!htb]
-	\caption{Estrutura da molécula de DNA}
-	\label{fig:estrutura_dna}
-	\centering
-	\includegraphics[width=.3\textwidth]{estrutura_dna.eps} \\
-	\begin{small}\textbf{Fonte: O Autor (2017)}\end{small}
-\end{figure}
-
-\lipsum[1]
-
-\begin{grafico}[!htb]
-	\caption{Estado do sequenciamento de genomas bacterianos}
-	\label{grafico:gold_bacterial_sequencing_status}
-	\centering
-	\includegraphics[width=.6\textwidth]{gold_bacterial_sequencing_status.eps} \\
-	\begin{small}\textbf{Fonte: \citeonline{mukherjee2016}}\end{small}
-\end{grafico}
-
-\lipsum[2-3]
-
-\chapter{Implementação}
-\label{cap:implementacao}
-
-\section{Algoritmo}
-
-\begin{algorithm}[H]
-   \SetAlgoLined
-   \Entrada{$S,\eta, U$} 
-   \Saida{Número esperado de nodos atingidos}
-   \Inicio{
-   $\sigma(S) = 0$ \\
-    \Para{cada $u \in S$}{
-   $\sigma(S)\leftarrow \sigma(S)+\textsc{Backtrack}(u,\eta,W,U)$\\
-     }
-   }
-   \Retorna{$\sigma(S)$}
-   \label{alg1}
-   \caption{\textsc{Esperança}}
- \end{algorithm}
-
+\include{textuais/01_referenciais_teoricos.tex}
 % ----------------------------------------------------------
 % Resultados e Discussão
 % ----------------------------------------------------------
-\chapter{Resultados}
-\label{cap:resultados}
-
-\begin{table}[!htb]
-\centering
-\caption{Informações de montagem dos genomas de referência}
-\label{tab:informacoes_montagem}
-\begin{tabular}{cccc}
-\toprule
-\textbf{Organismo} & \textbf{Montador} & \textbf{Bases com N} & \textbf{\textit{Scaffolds}} \\ \midrule
-\rowcolor[HTML]{F3F3F3} 
-\textbf{\textit{Corynebacterium pseudotuberculosis 262}} & & & \\
-\rowcolor[HTML]{DBDEDE} 
- & \textit{SPADES} & 2893857 & 4611 \\
-\rowcolor[HTML]{F3F3F3} 
-\textbf{\textit{Staphylococcus aureus A--S391\_USA300}} & & & \\
-\rowcolor[HTML]{DBDEDE} 
- & \textit{ABySS} & 3893185 & 5012 \\
-\rowcolor[HTML]{F3F3F3} 
- & \textit{ABySS2} & 3821622 & 125 \\
-\rowcolor[HTML]{DBDEDE} 
- & \textit{Allpaths-LG} & 2880676 & 19 \\
-\rowcolor[HTML]{F3F3F3} 
- & \textit{Bambus2} & 2862930 & 17 \\
-\rowcolor[HTML]{DBDEDE} 
- & MSR-CA & 2872905 & 17 \\
-\rowcolor[HTML]{F3F3F3} 
- & SGA & 3128388 & 546 \\
-\rowcolor[HTML]{DBDEDE} 
- & \textit{SOAPdenovo} & 2924135 & 175 \\
-\rowcolor[HTML]{F3F3F3} 
- & \textit{Velvet} & 2877995 & 173 \\
-\rowcolor[HTML]{DBDEDE} 
-\textbf{\textit{Rhodobacter sphaeroides 2.4.1}} & & & \\
-\rowcolor[HTML]{F3F3F3} 
- & \textit{ABySS} & 5160167 & 2714 \\
-\rowcolor[HTML]{DBDEDE} 
- & \textit{ABySS2} & 5331930 & 480 \\
-\rowcolor[HTML]{F3F3F3} 
- & \textit{Allpaths-LG} & 4609785 & 38 \\
-\rowcolor[HTML]{DBDEDE} 
- & \textit{Bambus2} & 4428612 & 92 \\
-\rowcolor[HTML]{F3F3F3} 
- & \textit{CABOG} & 4259679 & 130 \\
-\rowcolor[HTML]{DBDEDE} 
- & MSR-CA & 4498559 & 44 \\
-\rowcolor[HTML]{F3F3F3} 
- & SGA & 5614693 & 2096 \\
-\rowcolor[HTML]{DBDEDE} 
- & \textit{SOAPdenovo} & 4627058 & 312 \\
-\rowcolor[HTML]{F3F3F3} 
- & \textit{Velvet} & 4615068 & 382 \\ \bottomrule \\
-\end{tabular}
-\begin{small}\textbf{Fonte: \citeonline{gapblaster2016}}\end{small}
-\end{table}
-
-\begin{quadro}[!htb]
-	\centering
-	\caption{Comparação das funcionalidades do \textit{GapBlaster}, \textit{FGAP} e \textit{GapFiller}}
-	\label{quadro:comparacao_funcionalidades}
-	\resizebox{\textwidth}{!}{\begin{tabular}{lccc}
-			\toprule
-			\multicolumn{1}{c}{\textbf{Funcionalidades}} & \textbf{\textit{GapBlaster}} & \textbf{\textit{FGAP}} & \textbf{\textit{GapFiller}} \\ \midrule
-			\rowcolor[HTML]{F3F3F3} 
-			Método de alinhamento & \textit{Legacy Blast}, \textit{Blast+} ou \textit{MUMmer} & \textit{Blast+} & \textit{Bowtie} ou BWA \\
-			\rowcolor[HTML]{DBDEDE} 
-			Ajuste do tamanho da região flanqueadora & Sim & Sim & Sim \\
-			\rowcolor[HTML]{F3F3F3} 
-			Permite curadoria manual & Sim & Não & Não \\
-			\rowcolor[HTML]{DBDEDE} 
-			Realiza análise automática & Sim & Sim & Sim \\
-			\rowcolor[HTML]{F3F3F3} 
-			Usa leituras pareadas para fechar \textit{gaps} & Não & Não & Sim \\
-			\rowcolor[HTML]{DBDEDE} 
-			Usa \textit{contigs} para fechar \textit{gaps} & Sim & Sim & Não \\
-			\rowcolor[HTML]{F3F3F3} 
-			Lê arquivos nos formatos FASTQ, SAM e BAM & Não & Não & Sim \\
-			\rowcolor[HTML]{DBDEDE} 
-			Executa código em paralelo & Não & Sim & Não \\
-			\rowcolor[HTML]{F3F3F3} 
-			Interface gráfica & Sim & Não & Não \\
-			\rowcolor[HTML]{DBDEDE} 
-			Melhora o resultado de outros programas & Sim & Não foi testado & Não foi testado \\
-			\rowcolor[HTML]{F3F3F3} 
-			Fecha \textit{gaps} corretamente & Sim & Sim & Sim \\ \bottomrule \\
-	\end{tabular}}
-	\begin{small}\textbf{Fonte: \citeonline{gapblaster2016}}\end{small}
-\end{quadro}
-
+\include{textuais/02_resultados_e_discussao.tex}
 % ----------------------------------------------------------
 % Considerações Finais
 % ----------------------------------------------------------
-\chapter{Conclusão}
-\label{conclusao}
-
-\lipsum[31-33]
-
+\include{textuais/03_considerações_finais.tex}
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
