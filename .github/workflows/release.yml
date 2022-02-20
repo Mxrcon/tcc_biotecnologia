@@ -13,7 +13,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-          args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=TCC.pdf main.tex"
+          args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=TCC main.tex"
       - name: Upload results
         uses: actions/upload-artifact@v2
         with:
