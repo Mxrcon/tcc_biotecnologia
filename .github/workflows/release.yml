@@ -1,0 +1,38 @@
+name: Release LaTeX document
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+          args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=TCC.pdf main.tex"
+      - name: Upload results
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: TCC.pdf
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          clean: false
+          ref: main
+      - name: Build Changelog
+        id: build_changelog
+        uses: Bullrich/generate-release-changelog@master
+        env:
+          REPO: ${{ github.repository }}
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "*.pdf,main.tex,LICENSE"
+          body: ${{steps.build_changelog.outputs.changelog}}
+          token: ${{ secrets.GITHUB_TOKEN }}
