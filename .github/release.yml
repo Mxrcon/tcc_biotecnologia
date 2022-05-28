@@ -1,0 +1,10 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - github-actions[bot]
+  categories:
+    - title: Changes :engine:
+      labels:
+        - "*"
