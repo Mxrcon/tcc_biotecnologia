@@ -26,10 +26,10 @@ jobs:
           clean: false
           ref: main
       - name: Create Release
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "*.pdf,main.tex,LICENSE"
-        token: ${{ secrets.GITHUB_TOKEN }}
-        generateReleaseNotes: true
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "*.pdf,main.tex,LICENSE"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          generateReleaseNotes: true
         
 
