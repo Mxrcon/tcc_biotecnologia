@@ -17,8 +17,11 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          message: 'Using bot :robot: to produce pdf from latex'
+          message: ':robot: Using action to produce pdf from latex'
           add: '*.pdf'
+          default_author: github_actions
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
 
       - name: Checkout
         uses: actions/checkout@v2
