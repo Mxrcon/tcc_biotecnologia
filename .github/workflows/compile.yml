@@ -17,8 +17,6 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: Davi Marcon
-          author_email: davijosuemarcon@gmail.com
           message: 'Using bot :robot: to produce pdf from latex'
           add: '*.pdf'
 
