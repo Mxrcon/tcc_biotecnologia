@@ -1,6 +1,8 @@
 name: Compile LaTeX document
 on:
   push:
+    paths:
+      - '*.tex'
     branches:    
       - main       
 jobs:
