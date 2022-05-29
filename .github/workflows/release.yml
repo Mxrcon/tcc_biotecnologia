@@ -25,11 +25,27 @@ jobs:
           fetch-depth: 0
           clean: false
           ref: main
-      - name: Create Release
+      - name: Build Changelog
+        id: build_changelog
+        uses: Bullrich/generate-release-changelog@master
+        env:
+          REPO: ${{ github.repository }}
+      - name: Clean Changelog
+        id: modified
+        run: |
+          set -o noglob
+          log=$(cat << "EOF" | grep -v :robot:| tac
+          ${{steps.build_changelog.outputs.changelog}}
+          EOF
+          )
+          log="${log//'%'/'%25'}"
+          log="${log//$'\n'/'%0A'}"
+          log="${log//$'\r'/'%0D'}"
+          echo "::set-output name=modified::$log"
+          
+      - name: Release
         uses: ncipollo/release-action@v1
         with:
           artifacts: "*.pdf,main.tex,LICENSE"
+          body: ${{ steps.modified.outputs.modified }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          generateReleaseNotes: true
-        
-
