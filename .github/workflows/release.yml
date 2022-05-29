@@ -45,7 +45,15 @@ jobs:
     
       - name: Read release header file
         id: release_header
-        run: echo "::set-output name=header::$(cat .github/misc/release_header.md)"
+        run: |
+          set -o noglob
+          log=$(cat << "EOF" | tac .github/misc/release_header.md
+          EOF
+          )
+          header="${log//'%'/'%25'}"
+          header="${log//$'\n'/'%0A'}"
+          header="${log//$'\r'/'%0D'}"
+          echo "::set-output name=header::$header"
 
       - name: Release
         uses: ncipollo/release-action@v1
