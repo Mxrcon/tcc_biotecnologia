@@ -42,10 +42,14 @@ jobs:
           log="${log//$'\n'/'%0A'}"
           log="${log//$'\r'/'%0D'}"
           echo "::set-output name=modified::$log"
-          
+    
+      - name: Read release header file
+        id: release_header
+        run: echo "::set-output name=header::$(cat .github/misc/release_header.md)"
+
       - name: Release
         uses: ncipollo/release-action@v1
-        with:
+        with: 
           artifacts: "*.pdf,main.tex,LICENSE"
-          body: ${{ steps.modified.outputs.modified }}
+          body: "${{steps.release_header.outputs.header}}${{ steps.modified.outputs.modified }}"
           token: ${{ secrets.GITHUB_TOKEN }}
