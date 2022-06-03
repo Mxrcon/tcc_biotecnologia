@@ -18,6 +18,14 @@ jobs:
         with:
           root_file: main.tex
           args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=TCC main.tex"
+  
+      - name: rclone
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+        with:
+          args: copy TCC.pdf gdrive:TCC/
+          
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
