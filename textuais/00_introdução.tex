@@ -22,17 +22,28 @@ Identificar a produção de substâncias antimicrobianas em Actinomicetos
 \end{enumerate}
 
 \section{Metodologia}
-\subsection{Coleta das amostras}
-\subsection{REP}
-\begin{enumerate}
-    \item Primers%TODO
-    \item Gel analyzer e Rscript%TODO
-    \item Análise do dendograma%TODO
-\end{enumerate}
+\subsection{Isolamento e obtenção das amostras}
+As amostras bacterianas utilizadas neste estudo foram obtidas do banco de isolados de outro
+trabalho, disponibilizados pelo Centro de Genômica e Biologia de sistemas. As quais foram
+obtidas apartir da cultura em meio Proteina-P (HI-MEDIA) para isolamento de actinomicetos,
+o DNA desses isolados foi extraído utilizando o \textit{kit DNEasy} (QIAGEN) e
+método \textit{in house} com fenol-clorofórmio-álcool-isoamil.
+
+\subsection{Identificação de perfil clonal}
+Para análise de perfil clonal foi utilizada PCR para sequências palindrômicas
+%TODO
+extragênicas repetidas(\textit{REP}) com os primers F e R, os produtos amplificados
+foram submetidos a eletroforese em gel de agarose 1.5\% com adição de 0.5\% de
+brometo de etídio por 1 hora e 30 minutos, com corrente de 70V 70mAh e 70W.
+
+O gel foi fotografado e o tamanho dos fragmentos foi analisado usando a ferramenta
+Gel Analyzer e uma tabela com os dados foi utilizada para cálculo de \textit{clusters}
+dos isolados e criação de um dendograma com o uso de um \textit{script} na
+linguagem R.
 
 \subsection{Teste de bioatividade}
 \subsubsection{Obtenção dos extratos}
-Bactérias obtidas em estudo prévio, foram cultivados em meio Ágar TSB para
+40 bactérias com perfis clonais diferentes foram cultivados em meio Ágar TSB para
 reativação. Após isso, os isolados foram inoculados em Caldo TSB por 16 horas,
 esse caldo foi centrifugado a 9500$G$ por 8 minutos e o sobrenadante foi coletado
 e reservado para uso no mesmo dia.
@@ -52,7 +63,6 @@ análise para testes de substâncias antimicrobianas\cite{clsi2020}.
 Os halos de inibição foram medidos após o crecimento de 24 horas a $30$\textdegree$C$
 e análisados estatisticamente utilizando teste de $\rho$ com
 o uso da ferramenta R.
-
 
 
 \section{Estrutura do Trabalho}
