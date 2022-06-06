@@ -177,20 +177,22 @@
 
 % informações do PDF
 \makeatletter
+\usepackage[backref]{hyperref}
 \hypersetup{
-     	%pagebackref=true,
-		pdftitle={\imprimirtitulo}, 
-		pdfauthor={\imprimirautor},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={\imprimirpalavraschave}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=black,          	% color of internal links
-    	citecolor=black,        		% color of links to bibliography
-    	filecolor=magenta,      		% color of file links
-		urlcolor=blue,
-		bookmarksdepth=4,
-        breaklinks=true
+	portuguese,
+	colorlinks=true,   % true: "links" coloridos; false: "links" em caixas de texto
+	linkcolor=black,    % Define cor dos "links" internos
+	citecolor=black,    % Define cor dos "links" para as referências bibliográficas
+	filecolor=black,    % Define cor dos "links" para arquivos
+	urlcolor=black,
+    pagebackref=true,
+	pdftitle={\imprimirtitulo},
+	pdfauthor={\imprimirautor},
+    pdfsubject={\imprimirpreambulo},
+	pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={\imprimirpalavraschave},
+	bookmarksdepth=4,
+    breaklinks=true
 }
 \makeatother
 % --- 
