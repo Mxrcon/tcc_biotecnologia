@@ -46,6 +46,7 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
+          name: ${{github.ref_name}}
           artifacts: "*.pdf,main.tex,LICENSE"
           body: ${{ steps.modified.outputs.modified }}
           token: ${{ secrets.GITHUB_TOKEN }}
