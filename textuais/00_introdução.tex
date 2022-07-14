@@ -16,103 +16,27 @@ emprego de metodologias modernas de investigação podem continuar a fornecer
 substâncias de impacto mercadológico.
 
 \section{Justificativa}
-Actinomicetos são interessantes alvos para a desecoberta de compostos
-de relevância farmacológica, especialmente como solução para os crescentes níveis
+Bactérias ambientais são interessantes alvos para a descoberta de compostos
+de relevância biotecnológica, especialmente como solução para os crescentes níveis
 de resistência a antimicrobianos encontrados em microorganismos patogênicos.
 O isolamento desses microorganismos, especialmente do ambiente amazônico,
-é um passo importante em busca do desenvolvimento de novos fármacos.
+é um passo importante em busca de compostos de potencial farmacológico e industrial.
 
-\section{Objetivos}
+\chapter{Objetivos}
 
-\subsection{Objetivo Geral}
+\section{Objetivo Geral}
 
 Determinar a produção de compostos antimicrobianos de actinomicetos
 provenientes do solo do parque do utinga
 
-\subsection{Objetivos Específicos}
+\section{Objetivos Específicos}
 \begin{enumerate}
     \item Identificar e caracterizar os organismos em nível de espécie
     \item Determinar o perfil clonal e a distância filogenética entre os isolados
     \item Categorizar os microorganismos quanto a produção de compostos bactericidas.
 \end{enumerate}
 
-\section{Metodologia}
-\subsection{Isolamento e obtenção das amostras}
-As amostras bacterianas utilizadas neste estudo foram obtidas do banco de isolados de outro
-trabalho, disponibilizados pelo Centro de Genômica e Biologia de sistemas. As quais foram
-obtidas apartir da cultura em meio Ágar Amido Proteina-M (HI-MEDIA) para isolamento de actinomicetos.
 
-\subsection{Extração de DNA e identificação das espécies}
-Os microorganismos foram cultivados em meio TSB e centrifugados a 13000rpm por 15 minutos,
-os \textit{pellets} foram coletados e utilizados para extração usando o kit DNEasy e método
-adaptado de extração usando  fenol-clorofórmio-álcool-isoamil. O DNA gênomico extraído
-foi quantificado utilizando espectrofotometria com NanoDrop(Thermo Fisher) e visualizado
-em gel de agarose 1,5\% com brometo de etídio. 
-Foi utilizada PCR com os primers %TODO
-para amplificação do RNA ribossomal 16s, os amplicons foram sequênciados utilizando 3500 
-genetic analyzer (Applied Biosystems). Os fragmentos \textit{foward} e \textit{reverse}
-foram alinhados utilizando BioEdit(TODO) e as \textit{contigs} produzidas foram
-alinhadas ao banco de dados de RNA ribossomal do NCBI com a ferramenta BLAST e as espécies
-dos organismos foram determinadas utilizando homologia.  
-
-\subsection{Identificação de perfil clonal}
-Para análise de perfil clonal foi utilizada PCR para sequências palindrômicas
-%TODO
-extragênicas repetidas(\textit{REP}) com os primers F e R, os produtos amplificados
-foram submetidos a eletroforese em gel de agarose 1.5\% com adição de 0.5\% de
-brometo de etídio por 1 hora e 30 minutos, com corrente de 70V 70mAh e 70W.
-
-O gel foi fotografado e o tamanho dos fragmentos foi analisado usando a ferramenta
-Gel Analyzer e uma tabela com os dados foi utilizada para cálculo de \textit{clusters}
-dos isolados e criação de um dendograma com o uso de um \textit{script} na
-linguagem R.
-
-\subsection{Teste de bioatividade}
-\subsubsection{Obtenção dos extratos}
-Isolados que durante o isolamento inibiam o crescimento de outras amostras e outros 37
-com perfis clonais diferentes foram cultivados em meio Ágar TSB para
-reativação. Após isso, foram inoculados em Caldo TSB de 1 a 5 dias até turvação completa
-do meio, esse caldo foi centrifugado a 9000$G$ por 10 minutos e o sobrenadante foi coletado
-e filtrado em filtro 0.22$\mu$m para uso no mesmo dia.
-\subsubsection{Teste de difusão em poço}
-Foi utilizado teste de difusão em poço para determinação de atividade antimicrobiana,
-para isso foi utilizado meio Müeller-Hinton Ágar, com furos de 10mm de diâmetro.
-Em cada furo foi depositado $50\mu$L de extrato, as cepas teste utilizadas foram:
-\textit{Bacillus substilis ATCC 6633}, \textit{Corynebacterium fimi NTC5}, \textit{Staphylococcus aureus ATCC 25922}
-e um isolado resistente de \textit{Escherichia coli}(APC43A) obtido em estudo anterior \cite{dhara2019}.
-Para cada teste, foi preparado inóculo em solução salina 1\% com ajuste para 0.5
-na escala McFarland, essa solução foi uniformemente espalhada com uso de swab estéril.
-
-Como controles positivos foram utilizados discos de antibióticos com
-eficácia para cada uma das cepas controle, conforme descrito nas normas de controle e
-análise para testes de substâncias antimicrobianas\cite{clsi2020}.
-
-\begin{table}
-    \caption{Antibióticos utilizados como controle}
-    \label{tab:lista_antibioticos}
-    \tiny
-    \centering
-    \resizebox{\textwidth}{!}{\begin{tabular}{ll}
-    \toprule
-    \textbf{Bactéria}                           & \textbf{Antibiótico controle} \\\midrule
-    \rowcolor[HTML]{F3F3F3}
-    \textit{Escherichia coli ATCC 292} & Impinem               \\
-    \rowcolor[HTML]{DBDEDE} 
-    \textit{Staphylococcus aureus}     & Impinem               \\
-    \rowcolor[HTML]{F3F3F3}
-    \textit{Corynebacterium fimi}      & ?                     \\
-    \rowcolor[HTML]{DBDEDE} 
-    \textit{Escherichia coli APC43A}   & ?                     \\
-    \bottomrule \\
-    \end{tabular}}
-    \begin{small}\textbf{Fonte: Autor}\end{small}
-\end{table}
-
-
-Os halos de inibição foram medidos após o crecimento de $24$ horas a $30$\textdegree$C$
-e foram elaborados graficos utilizando a uso da ferramenta R com o uso do pacote ggplot2.
-
-\section{Estrutura do Trabalho}
 
 
 
