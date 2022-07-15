@@ -1,42 +1,22 @@
 \chapter{Metodologia}
-\section{Isolamento e obtenção das amostras}
-As amostras bacterianas utilizadas neste estudo foram obtidas do banco de isolados de outro
-trabalho, disponibilizados pelo Centro de Genômica e Biologia de sistemas. As quais foram
-obtidas apartir da cultura em meio Ágar Amido Proteina-M (HI-MEDIA) para isolamento de actinomicetos.
+\section{Seleção de amostras}
+Foram selecionados 4 microorganismos de espécies diferentes do banco de amostras ambientais provenientes
+do parque estadual Utinga - Belém, PA gentilmente disponibilizadas pelo Centro de Gênomica e Biologia de Sistemas.
+Incluindo três Actinobacterias: \textit{Kitasatospora sp.},\textit{Rhodococcus sp.} e \textit{Streptomyces sp.}
+e uma bactéria do filo \textit{Firmicutes}: \textit{Brevibacillus brevis}.
+Essa amostras foram previamente identificadas utilizando sequênciamento do gene de RNA ribossomal 16s
+utilizando os primers (TODO) com o squenciador 3500(TODO).
 
-\section{Extração de DNA e identificação das espécies}
-Os microorganismos foram cultivados em meio TSB e centrifugados a 13000rpm por 15 minutos,
-os \textit{pellets} foram coletados e utilizados para extração usando o kit DNEasy e método
-adaptado de extração usando  fenol-clorofórmio-álcool-isoamil. O DNA gênomico extraído
-foi quantificado utilizando espectrofotometria com NanoDrop(Thermo Fisher) e visualizado
-em gel de agarose 1,5\% com brometo de etídio. 
-Foi utilizada PCR com os primers %TODO
-para amplificação do RNA ribossomal 16s, os amplicons foram sequênciados utilizando 3500 
-genetic analyzer (Applied Biosystems). Os fragmentos \textit{foward} e \textit{reverse}
-foram alinhados utilizando BioEdit(TODO) e as \textit{contigs} produzidas foram
-alinhadas ao banco de dados de RNA ribossomal do NCBI com a ferramenta BLAST e as espécies
-dos organismos foram determinadas utilizando homologia.  
+\section{Extração de DNA}
+As amostras foram cultivadas em meio Tryptone Soy Broth (TSB) por 48 horas á 28 graus, e em
+seu DNA foi extraído utilizando o kit HiPureA Multi-sample DNA Purification Kit(HI-MEDIA) seguindo as orientações
+do fabricante.
 
-\section{Identificação de perfil clonal}
-Para análise de perfil clonal foi utilizada PCR para sequências palindrômicas
-extragênicas repetidas(\textit{REP}) com os primers F e R, os produtos amplificados
-foram submetidos a eletroforese em gel de agarose 1.5\% com adição de 0.5\% de
-brometo de etídio por 1 hora e 30 minutos, com corrente de 70V 70mAh e 70W.
-
-O gel foi fotografado e o tamanho dos fragmentos foi analisado usando a ferramenta
-Gel Analyzer e uma tabela com os dados foi utilizada para cálculo de \textit{clusters}
-dos isolados e criação de um dendograma com o uso de um \textit{script} na
-linguagem R.
-
-\section{Sequênciamento}
-Foram selecionados 4 microorganismos de espécies diferentes, sendo 3 Actionomicetos
-e uma bactéria do gênero \textit{Bacillus} que foi capaz de inibir o crescimento de
-outros microorganismos durante o isolamento. As bibliotecas foram preparadas utilizando
-as recomendações do fabricante e sequênciadas com a plataforma %TODO
-
-\section{Mineração de Informações Genômicas}
-Após o Sequênciamento as amostras foram submetidas ao pipeline Bactopia, o qual filtrou
-as leituras, montou e anotou o genoma. Após isso, foram utilizadas as Bactopia \textit{tools}
-para análise de resistência, genes patogênicas, genes de produção de compostos, clusters
+\section{Sequênciamento e análise genômica}
+As bibliotecas foram preparadas utilizando o protocolo do fabricante e sequênciadas no equipamento
+Ion GeneStudio S5 Plus (Thermo Fisher)
+Após o sequênciamento as amostras foram submetidas ao pipeline Bactopia, o qual filtrou
+as leituras, montou e anotou o genoma. Após isso, foram utilizadas as ferramentas do Bactopia 
+para análise de resistência, genes patogênicos, genes de produção de compostos, clusters
 gênicos e elementos moveis. 
-Foram utilizados os softwares GoFeat, Brig e R para criação de figuras a partir dos dados gerados.
+Foram utilizados os softwares GoFeat, BRIG e R para criação de figuras a partir dos dados gerados.
