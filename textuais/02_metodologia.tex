@@ -19,7 +19,6 @@ dos organismos foram determinadas utilizando homologia.
 
 \section{Identificação de perfil clonal}
 Para análise de perfil clonal foi utilizada PCR para sequências palindrômicas
-%TODO
 extragênicas repetidas(\textit{REP}) com os primers F e R, os produtos amplificados
 foram submetidos a eletroforese em gel de agarose 1.5\% com adição de 0.5\% de
 brometo de etídio por 1 hora e 30 minutos, com corrente de 70V 70mAh e 70W.
@@ -28,3 +27,16 @@ O gel foi fotografado e o tamanho dos fragmentos foi analisado usando a ferramen
 Gel Analyzer e uma tabela com os dados foi utilizada para cálculo de \textit{clusters}
 dos isolados e criação de um dendograma com o uso de um \textit{script} na
 linguagem R.
+
+\section{Sequênciamento}
+Foram selecionados 4 microorganismos de espécies diferentes, sendo 3 Actionomicetos
+e uma bactéria do gênero \textit{Bacillus} que foi capaz de inibir o crescimento de
+outros microorganismos durante o isolamento. As bibliotecas foram preparadas utilizando
+as recomendações do fabricante e sequênciadas com a plataforma %TODO
+
+\section{Mineração de Informações Genômicas}
+Após o Sequênciamento as amostras foram submetidas ao pipeline Bactopia, o qual filtrou
+as leituras, montou e anotou o genoma. Após isso, foram utilizadas as Bactopia \textit{tools}
+para análise de resistência, genes patogênicas, genes de produção de compostos, clusters
+gênicos e elementos moveis. 
+Foram utilizados os softwares GoFeat, Brig e R para criação de figuras a partir dos dados gerados.
