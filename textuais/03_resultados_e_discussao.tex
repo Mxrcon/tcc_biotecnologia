@@ -18,10 +18,15 @@ A qualidade média das sequências pode ser observada a partir dos gráficos ger
 fastqc:
 
 \begin{figure}[!htb]
-	\caption{Gráfico representando a qualidade média das sequências na escala PHRED antes \(a esq.\) e depois \(a dir.\) de filtra-las}
+	\caption{Gráficos representando a qualidade média das sequências na escala PHRED antes (a esquerda) e depois (a direita) de filtra-las}
 	\label{fig:fastqc_antes}
 	\centering
-	\includegraphics[width=.3\textwidth]{imagens/read\_qc/002.png} \\
-    \includegraphics[width=.3\textwidth]{imagens/read\_qc/002trimmed.png} \\
+	\begin{minipage}{.45\linewidth}
+		\includegraphics[width=\linewidth]{imagens/read\_qc/002.png}
+	  \end{minipage}
+	  \hspace{.05\linewidth}
+	  \begin{minipage}{.45\linewidth}
+		\includegraphics[width=\linewidth]{imagens/read\_qc/002trimmed.png}
+	  \end{minipage}
     \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
 \end{figure}
