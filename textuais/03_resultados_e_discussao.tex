@@ -11,7 +11,7 @@ Baseando-se num tamanho de genoma variável de 3 a 10 milhões de bases para \te
 determinar a cobertura real estimada pela fórmula $C= (L\cdot N)/G $ sendo $C$ a cobertura, $L$ o comprimento
 médio das reads e $G$ o tamanho do genoma. A partir disso, obtivemos que a cobertura para a amostra ACT016 Após
 filtrar as leituras está entre $70$ e $233,53$ vezes. 
-Para a amostra ACT094, consideramos o tamanho do genoma de referência de \textit{Brevibacillus Brevis}(NZ\_LR134338) 
+Para a amostra ACT094, consideramos o tamanho do genoma de referência de \textit{Brevibacillus Brevis}$($NZ\_LR134338$)$ 
 de 6.2 milhões de bases e estimamos a cobertura em aproximadamente $142,66$ vezes.
 
 As qualidades médias das sequências pode ser observada a partir dos gráficos a seguir gerados pela ferramenta FASTQC:
@@ -48,7 +48,7 @@ As qualidades médias das sequências pode ser observada a partir dos gráficos 
 A partir desses gráficos podemos observar a perda de qualidade no final das leituras, um tipo de limitação
 técnica comum ao utilizar sequenciadores da plataforma \textit{Illumina}, porém o término em baixa qualidade
 pode ser removido após a filtração, tendo uma qualidade média ao longo da sequência próximo de PHRED 26 e
-removendo sequências abaixo de PHRED 20 ( que representa probabilidade de erro maior que 1 em 100).
+removendo sequências abaixo de PHRED 20 $($ que representa probabilidade de erro maior que 1 em 100$)$.
 
 
 \section{Montagem das \textit{contigs}}
@@ -63,10 +63,10 @@ removendo sequências abaixo de PHRED 20 ( que representa probabilidade de erro 
 \end{figure}
 \vspace{\floatsep}
 
-A melhor montagem para a amostra ACT016 é a montagem \textit{manual_spades} que foi feita utilizando
+A melhor montagem para a amostra ACT016 é a montagem \textit{manual\_spades} que foi feita utilizando
 o montador spades junto com a correção do software shovill. Essa montagem foi escolhida por ter o maior
-valor de L50 (menor quantidade de contigs para atingir 50 \% do número de pares de base) e maior 
-\textit{contig} em tamanho absoluto (222 mil pares de base). O conteúdo GC de 60 \% dessa montagem está de acordo
+valor de L50 $($menor quantidade de contigs para atingir 50 \% do número de pares de base$)$ e maior 
+\textit{contig} em tamanho absoluto $($222 mil pares de base$)$. O conteúdo GC de 60 \% dessa montagem está de acordo
 com o descrito por \citeonline{yadav2018} para Actinomicetos.
 
 \subsection{094}
@@ -80,10 +80,10 @@ com o descrito por \citeonline{yadav2018} para Actinomicetos.
 \end{figure}
 \vspace{\floatsep}
 
-De maneira similar, a melhor montagem para a amostra 094 também é a montagem \textit{manual_spades}.
-possuindo um valor similar a montagem \textit{more_kmers} porém se diferenciando por possuir a maior \texit{contig}
+De maneira similar, a melhor montagem para a amostra 094 também é a montagem \textit{manual\_spades}.
+possuindo um valor similar a montagem \textit{more\_kmers} porém se diferenciando por possuir a maior \textit{contig}
 com aproximadamente 80 mil pares de base a mais, um fator muito relevante para a posterior montagem do genoma completo.
-O conteúdo GC também está de acordo com valores comumente encontrados em \texit{Brevibacillus brevis} \cite{nakamura1991bacillus}.
+O conteúdo GC também está de acordo com valores comumente encontrados em \textit{Brevibacillus brevis} \cite{nakamura1991bacillus}.
 
 \section{Predição de espécies e montagem de genoma}
 
@@ -91,10 +91,10 @@ Os melhores conjuntos de \textit{contigs} montadas foram submetidas ao software 
 para a amostra 016 a espécie predita foram \textit{Rhodococcus} com $71,66$ \% de \textit{contigs} identificadas, mas importunamente
 $18,45$ \% das \textit{contigs} não foram identificadas, determinando que a amostra 016 foi predita como \textit{Rhodococcus}
 não identificado. A partir desse resultado o genoma de referência sugerido para a montagem foi o de código
-de acesso NZ_CP054690 da cepa \textit{Rhodococcus sp. W8901}. 
+de acesso NZ\_CP054690 da cepa \textit{Rhodococcus sp. W8901}. 
 
 Para a amostra 094, $85.52$ \% das \textit{contigs} foram preditas como \textit{Brevibacillus brevis}
-concordando com os resultados previamente obtidos a partir de sequênciamento de sanger. O genoma NZ_CP030117
+concordando com os resultados previamente obtidos a partir de sequenciamento de sanger. O genoma NZ\_CP030117
 da cepa \textit{DZQ7} referência para montagem de genomas dessa espécie.
 
 As montagens utilizando genomas de referência escolhidos, foram avaliadas quanto a presença de genes 
