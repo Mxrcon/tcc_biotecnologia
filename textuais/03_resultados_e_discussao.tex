@@ -20,12 +20,12 @@ As qualidades médias das sequências pode ser observada a partir dos gráficos 
 	\caption{Gráficos representando a qualidade média das leituras da amostra ACT016 na escala PHRED}
 	\label{fig:fastqc_antes}
 	\centering
-	\begin{minipage}{.45\linewidth}
-		\includegraphics[height=.8\linewidth]{imagens/read\_qc/002.png}
+	\begin{minipage}{.65\linewidth}
+		\includegraphics[height=.45\linewidth]{imagens/read\_qc/002.png}
 	  \end{minipage}
 	  \hspace{.05\linewidth}
-	  \begin{minipage}{.45\linewidth}
-		\includegraphics[height=.8\linewidth]{imagens/read\_qc/002trimmed.png}
+	  \begin{minipage}{.65\linewidth}
+		\includegraphics[height=.45\linewidth]{imagens/read\_qc/002trimmed.png}
 	  \end{minipage}
     \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
 \end{figure}
@@ -34,11 +34,11 @@ As qualidades médias das sequências pode ser observada a partir dos gráficos 
 	\caption{Gráficos representando a qualidade média das leituras da amostra ACT094 na escala PHRED}
 	\label{fig:fastqc_antes}
 	\centering
-	\begin{minipage}{.45\linewidth}
+	\begin{minipage}{.75\linewidth}
 		\includegraphics[height=.75\linewidth]{imagens/read\_qc/004.png}
 	  \end{minipage}
 	  \hspace{.01\linewidth}
-	  \begin{minipage}{.45\linewidth}
+	  \begin{minipage}{.75\linewidth}
 		\includegraphics[height=.75\linewidth]{imagens/read\_qc/004trimmed.png}
 	  \end{minipage}
     \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
@@ -51,7 +51,7 @@ pode ser removido após a filtração, tendo uma qualidade média ao longo da se
 removendo sequências abaixo de PHRED 20 ( que representa probabilidade de erro maior que 1 em 100).
 
 
-\section{Montagem dos genomas}
+\section{Montagem das \textit{contigs}}
 
 \subsection{016}
 \begin{figure}[H]
@@ -63,10 +63,10 @@ removendo sequências abaixo de PHRED 20 ( que representa probabilidade de erro 
 \end{figure}
 \vspace{\floatsep}
 
-A melhor montagem para a amostra ACT\_016 é a montagem \textit{manual_spades} que foi feita utilizando
+A melhor montagem para a amostra ACT016 é a montagem \textit{manual_spades} que foi feita utilizando
 o montador spades junto com a correção do software shovill. Essa montagem foi escolhida por ter o maior
-valor de L50 (menor quantidade de contigs para atingir 50\% do número de pares de base) e maior 
-\textit{contig} em tamanho absoluto ( 222 mil pares de base). O conteúdo GC de 60\% dessa montagem está de acordo
+valor de L50 (menor quantidade de contigs para atingir 50 \% do número de pares de base) e maior 
+\textit{contig} em tamanho absoluto (222 mil pares de base). O conteúdo GC de 60 \% dessa montagem está de acordo
 com o descrito por \citeonline{yadav2018} para Actinomicetos.
 
 \subsection{094}
@@ -85,4 +85,23 @@ possuindo um valor similar a montagem \textit{more_kmers} porém se diferenciand
 com aproximadamente 80 mil pares de base a mais, um fator muito relevante para a posterior montagem do genoma completo.
 O conteúdo GC também está de acordo com valores comumente encontrados em \texit{Brevibacillus brevis} \cite{nakamura1991bacillus}.
 
-\section{Predição de espécies e pureza da montagem}
+\section{Predição de espécies e montagem de genoma}
+
+Os melhores conjuntos de \textit{contigs} montadas foram submetidas ao software KRAKEN2 para predição de espécie,
+para a amostra 016 a espécie predita foram \textit{Rhodococcus} com $71,66$ \% de \textit{contigs} identificadas, mas importunamente
+$18,45$ \% das \textit{contigs} não foram identificadas, determinando que a amostra 016 foi predita como \textit{Rhodococcus}
+não identificado. A partir desse resultado o genoma de referência sugerido para a montagem foi o de código
+de acesso NZ_CP054690 da cepa \textit{Rhodococcus sp. W8901}. 
+
+Para a amostra 094, $85.52$ \% das \textit{contigs} foram preditas como \textit{Brevibacillus brevis}
+concordando com os resultados previamente obtidos a partir de sequênciamento de sanger. O genoma NZ_CP030117
+da cepa \textit{DZQ7} referência para montagem de genomas dessa espécie.
+
+As montagens utilizando genomas de referência escolhidos, foram avaliadas quanto a presença de genes 
+ortólogos. Na amostra 016 foram encontrados 120 BUSCOs completos e únicos, 2 genes completos e duplicados e 2 genes fragmentados,
+ o valor de genes completos únicos de 98\% foi considerada satisfatória para a montagem e de pureza suficiente para
+a anotação do genoma. Já na amostra 094, 121 BUSCOs completos e únicos foram encontrados, 1 gene completo e duplicado, 1 busco fragmentado
+e 1 busco faltando, com o percentual de $98,4$ \% também foi considerada suficiente para prosseguimento da anotação.
+
+o software PROKKA foi capaz de predizer 5738 CDSs para a amostra 016 e 6082 CDS para a amostra 094, contendo genes
+de diversas funções celulares. 
