@@ -14,9 +14,9 @@ filtrar as leituras está entre $70$ e $233,53$ vezes.
 Para a amostra ACT094, consideramos o tamanho do genoma de referência de \textit{Brevibacillus Brevis}(NZ\_LR134338) 
 de 6.2 milhões de bases e estimamos a cobertura em aproximadamente $142,66$ vezes.
 
-As qualidades médias das sequências pode ser observada a partir dos gráficos  a seguir gerados pela ferramenta FASTQC:
+As qualidades médias das sequências pode ser observada a partir dos gráficos a seguir gerados pela ferramenta FASTQC:
 
-\begin{figure}[htb]
+\begin{figure}[tbp]
 	\caption{Gráficos representando a qualidade média das leituras da amostra ACT016 na escala PHRED}
 	\label{fig:fastqc_antes}
 	\centering
@@ -30,7 +30,7 @@ As qualidades médias das sequências pode ser observada a partir dos gráficos 
     \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
 \end{figure}
 \vspace{\floatsep}
-\begin{figure}[htb]
+\begin{figure}[tbp]
 	\caption{Gráficos representando a qualidade média das leituras da amostra ACT094 na escala PHRED}
 	\label{fig:fastqc_antes}
 	\centering
@@ -52,3 +52,24 @@ removendo sequências abaixo de PHRED 20 ( que representa probabilidade de erro 
 
 
 \section{Montagem dos genomas}
+
+\subsection{016}
+\begin{figure}[tbp]
+	\caption{Report do software QUAST para as montagens da amostra 016}
+	\label{fig:quast_16}
+	\centering
+		\includegraphics[height=.8\linewidth]{imagens/assembly\_qc/016assembly.png}
+    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+\subsection{094}
+
+\begin{figure}[tbp]
+	\caption{Report do software QUAST para as montagens da amostra 094}
+	\label{fig:quast_16}
+	\centering
+		\includegraphics[height=.8\linewidth]{imagens/assembly\_qc/094assembly.png}
+    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+\end{figure}
+\vspace{\floatsep}
