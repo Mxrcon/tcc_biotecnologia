@@ -20,15 +20,17 @@ Ion GeneStudio S5 Plus (Thermo Fisher)
 \section{Análise Genômica}
 O pipeline Bactopia, filtrou as leituras, montou e anotou o genoma automaticamente.
 Paralelamente, as amostras foram filtradas manualmente utilizando a ferramenta Trimmomatic
-e foram realizadas montagens manuais utilizando o software Shovill com os montadores SKESA e SPADES.
+utilizando os seguintes parâmetros: "LEADING:3 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36"
+e foram realizadas montagens manuais utilizando o software Shovill com os montadores SKESA e SPADES utilizando
+parâmetros automáticos e kmers específicos (21,33,55,77,99,127).
 As melhores montagens foram selecionadas após visualização da qualidade no software QUAST. 
-Após isso as melhores montagens foram submetidas ao programa KRAKEN e BUSCO para determinar a pureza
+Após isso as melhores montagens foram submetidas ao programa KRAKEN para determinar a pureza
 das montagens e predição de espécies. Posteriormente os genomas foram montados em um único cromossomo
-utilizando o software RAGOUT utilizando genomas de referência, finalmente os genomas foram anotados utilizando o software
+utilizando o software RAGOUT utilizando genomas de referência proximos a espécie predita pelo KRAKEN, 
+a pureza das montagens foi verificada utilizando o software BUSCO.
+
+Finalmente os genomas foram anotados utilizando o software
 PROKKA, seus genes de resistência a antibióticos foram preditos utilizando o ARIBA e seus clusters de metabólitos
 secundários foram preditos utilizando a ferramenta ANTISMASH.
-
-Foi gerada uma árvore filogenética utilizando os 50 hits do gene de RNA ribossomal 16s, alinhados
-na ferramenta MAFT produzindo uma árvore filogenética por máxima verossimilhança com bootstrap 1000 usando RAXML.
 
 Foram utilizados os softwares GoFeat, fastqc e Artemis para criação de figuras a partir dos dados gerados.
