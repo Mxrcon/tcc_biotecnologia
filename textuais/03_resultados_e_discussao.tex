@@ -27,7 +27,7 @@ As qualidades médias das sequências pode ser observada a partir dos gráficos 
 \begin{figure}[H]
 	\caption{Gráficos representando a qualidade média das leituras da amostra ACT094 na escala PHRED}
 	\centering
-	\includegraphics[width=0.8\linewidth]{{imagens/read\_qc/004merged.png} \\
+	\includegraphics[width=0.8\linewidth]{imagens/read\_qc/004merged.png} \\
 	\centering
     \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
 \end{figure}
@@ -93,3 +93,84 @@ e 1 busco faltando, com o percentual de $98,4$ \% também foi considerada sufici
 
 o software PROKKA foi capaz de predizer 5738 CDSs para a amostra 016 e 6082 CDS para a amostra 094, contendo genes
 de diversas funções celulares. 
+
+\section{Predição de \textit{BGCs} e resistência a antimicrobianos}
+
+Para a amostra 016, o software Antishmash foi capaz de identificar 16 cluster biosintéticos completos, porém
+apenas um cluster foi predito com 75\% de similaridade para produção de ectoína, um produto biosintético
+conhecido e produzido por uma ampla gama de bactérias gram positivas e negativas \cite{toveken2011specialized}.
+Além disso, através da ferramenta armfinder foi observada a presença de genes codificando uma beta-lactamase de classe A e uma proteína de
+proteção ribossomal ABC-F. A presença desses genes, pode indicar a resistência desse microorganismo a antibióticos beta-lactâmicos
+e a macrolídeos.  
+
+Já a amostra 094, teve 15 cluster biosintéticos preditos, dentro os quais 4 tiveram sua função identificada
+por similaridade sendo produtores das seguintes substâncias e identidades percentuais: petrobactina$($83\%$)$, 
+tyrocidina$($81\%$)$, gramicidina$($91\%$)$ e macrobrevina ($($100\%$)$). 
+
+
+ \begin{figure}[H]
+	\caption{\textit{Cluster biosintético} para produção de petrobactina na amostra 094}
+	\label{fig:quast_16}
+	\centering
+		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao1.svg} \\
+	\centering
+    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+A petrobactina é um sideróforo com protoreatividade capaz de reduzir ferro $III$ em 
+ferro $II$\cite{barbeau2002petrobactin}. Interessantemente o cluster presente na amostra 94
+capaz de produzir petrobactina, contém uma proteína de resistência tipo A a vancomicina e teicoplanina.
+
+\begin{figure}[H]
+	\caption{\textit{Cluster biosintético} para produção de tirocidina na amostra 094}
+	\label{fig:quast_16}
+	\centering
+		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao2.svg} \\
+	\centering
+    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+\begin{figure}[H]
+	\caption{\textit{Cluster biosintético} para produção de gramicidina na amostra 094}
+	\label{fig:quast_16}
+	\centering
+		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao3.svg} \\
+	\centering
+    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+A gramicidina e tirocidina são peptídeos lineares de síntese não ribossomal, com mecanismo de ação
+através do dano na membrana celular de outros organismos, a tirocidina é relatada como um candidato importante
+a antibiótico de nova geração por não ter induzido resistência nas células afetadas\cite{yang2018antimicrobial}.
+A presença de clusters capazes de produzir não apenas um mas dois tipos diferentes de peptídeos com
+atividade antimicrobiana sugere atividade antimicrobiana no isolado 094, o que precisa ser elucidado através
+de testes \textit{in vitro} em condições que promovam a expressão desses compostos para posterior purificação e
+descrição de suas estruturas através da técnica de espectometria de massa.
+
+\begin{figure}[H]
+	\caption{\textit{Cluster biosintético} para produção de macrobrevina na amostra 094}
+	\label{fig:quast_16}
+	\centering
+		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao4.svg} \\
+	\centering
+    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+O cluster de produção para macrobrevina foi o único encontrado com 100\% de similaridade na amostra
+094, esse antibiótico com estrutura incomum derivado de uma trans-aciltransferase policetídeo sintase foi inicialmente isolado
+a partir de \textit{Brevibacillus sp.} associados ao microbioma de plantas \cite{helfrich2018bipartite}.
+
+A amostra 016 apresenta diversos \textit{cluster} e através de métodos computacionais utilizando bancos
+de dados extensos não fomos capazes de predizer a função desses clusters, o que ressalta a importância de 
+estudos de purificação e descrição das estruturas desses compostos.
+
+Diferentemente, a amostra 094 apresenta 3 clusters identificados como produtores de produtos naturais com
+ativade antimicrobiana, o que deve ser confirmado através de ensaios elaborados que promovam a expressão
+desses genes e para sua posterior purificação. Esse microorganismo tem grande potêncial para descrição de 
+produtos naturais com atividade antimicrobiana, apesar de serem de classes conhecidas. A elucidação dessas
+estruturas pode sugerir modificações em antibióticos derivados dessa substância, e também ajudar a complementar
+informações já existentes a respeito da produção de compostos de interesse biotecnológicos em \textit{Brevibacillus brevis}.
