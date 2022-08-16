@@ -174,3 +174,61 @@ desses genes e para sua posterior purificação. Esse microorganismo tem grande 
 produtos naturais com atividade antimicrobiana, apesar de serem de classes conhecidas. A elucidação dessas
 estruturas pode sugerir modificações em antibióticos derivados dessa substância, e também ajudar a complementar
 informações já existentes a respeito da produção de compostos de interesse biotecnológicos em \textit{Brevibacillus brevis}.
+
+Quanto a presença de genes de resistência a amostra 94 teve a resistência predita para antibióticos como clorofenicol,
+Kanamicinda, Tobramicina, streptomicina, lincossamida, macrolídeos, streptogramina, macrolídeos e beta-lactâmicos. 
+
+\begin{table}[]
+	\centering
+    \caption{Informações a respeito dos alinhamentos para predição de \textit{ARGs}}
+	\begin{tabular}{llllr}
+	\hline
+	\multicolumn{1}{|l|}{\textbf{CDS da amostra}} & \multicolumn{1}{l|}{\textbf{Símbolo do Gene}} & \multicolumn{1}{l|}{\textbf{\% Cobertura do alinhamento}} & \multicolumn{1}{l|}{\textbf{\% Identidade do alinhamento}} & \multicolumn{1}{l|}{\textbf{Comprimento do alinhamento length}} \\ \hline
+	004\_01565                                    & catV                                          & 100.00                                                    & 94.52                                                      & 219                                                             \\
+	004\_04575                                    & ant(4')-Ic                                    & 100.00                                                    & 93.36                                                      & 256                                                             \\
+	004\_02000                                    & aac(6')-35                                    & 100.00                                                    & 92.74                                                      & 179                                                             \\
+	004\_02604                                    & ant(6)-Ic                                     & 100.00                                                    & 91.61                                                      & 286                                                             \\
+	004\_02904                                    & clbC                                          & 100.00                                                    & 90.96                                                      & 343                                                             \\
+	004\_00361                                    & mphJ                                          & 99.68                                                     & 88.60                                                      & 307                                                             \\
+	004\_01265                                    & blaBBI                                        & 100.00                                                    & 87.83                                                      & 304                                                            
+	\end{tabular}
+	\end{table}
+
+Os alinhamentos demonstram a presença de vários genes relacionados a resistência, inclusive a classes inteiras de antibióticos 
+como beta-lactâmicos e macrolídeos, devido ao grande espectro de proteção conferidos por esses genes. 
+
+\section{Estrutura final dos genomas}
+
+\begin{figure}[H]
+	\caption{Gráficos representando a montagem do cromossomo da amostra 016}
+	\label{fig:genoma16}
+	\centering
+	\includegraphics[width=0.8\linewidth]{imagens/genome/002.png} \\
+	\centering
+    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+\begin{figure}[H]
+	\caption{Gráficos representando a montagem do cromossomo da amostra 094}
+	\label{fig:genoma94}
+	\centering
+	\includegraphics[width=0.8\linewidth]{imagens/genome/004.png} \\
+	\centering
+    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+As figuras \ref{genoma16}\ref{genoma94} representam as montagens completas dos genomas, sendo
+os círculos do mais exterior para interior: Genes na direção \textit{foward} $($ roxo $)$,
+Genes na direção \textit{reverse} $($ azul claro $)$, \textit{clusters} gênicos $($ rosa $)$,
+qualidade da montagem $($ em cinza a montagem e em vermelho os \textit{gaps} da montagem $)$ e internamente 
+um gráfico representando a variação de conteúdo G$+$C $($ amarelo quando maior que 50\% e rosa quando menor$)$ e
+mais internamente um gráfico representando o valor de G$+$C. 
+
+Através dessa visualização, podemos observar a sobreposição de alguns clusters gênicos com áreas
+de \textit{gaps} na montagem, o que não desqualifica a predição desses clusters mas pode levar
+a uma baixa identidades ou ausência de componentes nos clusters como genes acessórios importantes
+para a síntese. O aprimoramento da montagem se faz necessário para o depósito desses genomas em 
+bancos de dados de montagens. Esse pode ter sido um dos motivos para a baixa identificação dos
+cluster na amostra 016.
