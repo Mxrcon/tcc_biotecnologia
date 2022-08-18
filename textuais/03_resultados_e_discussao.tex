@@ -178,21 +178,30 @@ informações já existentes a respeito da produção de compostos de interesse 
 Quanto a presença de genes de resistência a amostra 94 teve a resistência predita para antibióticos como clorofenicol,
 Kanamicinda, Tobramicina, streptomicina, lincossamida, macrolídeos, streptogramina, macrolídeos e beta-lactâmicos. 
 
-\begin{table}[]
-	\centering
-    \caption{Informações a respeito dos alinhamentos para predição de \textit{ARGs}}
-	\begin{tabular}{llllr}
-	\hline
-	\multicolumn{1}{|l|}{\textbf{CDS da amostra}} & \multicolumn{1}{l|}{\textbf{Símbolo do Gene}} & \multicolumn{1}{l|}{\textbf{\% Cobertura do alinhamento}} & \multicolumn{1}{l|}{\textbf{\% Identidade do alinhamento}} & \multicolumn{1}{l|}{\textbf{Comprimento do alinhamento length}} \\ \hline
-	004\_01565                                    & catV                                          & 100.00                                                    & 94.52                                                      & 219                                                             \\
-	004\_04575                                    & ant(4')-Ic                                    & 100.00                                                    & 93.36                                                      & 256                                                             \\
-	004\_02000                                    & aac(6')-35                                    & 100.00                                                    & 92.74                                                      & 179                                                             \\
-	004\_02604                                    & ant(6)-Ic                                     & 100.00                                                    & 91.61                                                      & 286                                                             \\
-	004\_02904                                    & clbC                                          & 100.00                                                    & 90.96                                                      & 343                                                             \\
-	004\_00361                                    & mphJ                                          & 99.68                                                     & 88.60                                                      & 307                                                             \\
-	004\_01265                                    & blaBBI                                        & 100.00                                                    & 87.83                                                      & 304                                                            
-	\end{tabular}
-	\end{table}
+	\begin{table}[htb]
+		\IBGEtab{%
+		  \caption{Informações a respeito dos alinhamentos para predição de \textit{ARGs}}%
+		  \label{tabela-args}
+		}{%
+		\begin{tabular}{ccccc}
+		 \toprule
+		 \textbf{CDS da \textit{query}} & \textbf{Abrev. do Gene} & \textbf{\% Cobertura} & \textbf{ Identidade $($\%$)$} & \textbf{Comprimento} \\
+		  \midrule 
+		  004\_01565                                    & catV                                          & 100.00                                                    & 94.52                                                      & 219                                                             \\
+		  004\_04575                                    & ant(4')-Ic                                    & 100.00                                                    & 93.36                                                      & 256                                                             \\
+		  004\_02000                                    & aac(6')-35                                    & 100.00                                                    & 92.74                                                      & 179                                                             \\
+		  004\_02604                                    & ant(6)-Ic                                     & 100.00                                                    & 91.61                                                      & 286                                                             \\
+		  004\_02904                                    & clbC                                          & 100.00                                                    & 90.96                                                      & 343                                                             \\
+		  004\_00361                                    & mphJ                                          & 99.68                                                     & 88.60                                                      & 307                                                             \\
+		  004\_01265                                    & blaBBI                                        & 100.00                                                    & 87.83                                                      & 304                                                             \\
+		  \bottomrule
+		\end{tabular}
+		}{%
+		  \fonte{Produzido pelo autor.}%
+		  \nota{Tabela contendo as informações obtidas a partir dos alinhamentos de sequência realizados pela
+		  ferramenta armfinder}%
+		  }
+		\end{table}
 
 Os alinhamentos demonstram a presença de vários genes relacionados a resistência, inclusive a classes inteiras de antibióticos 
 como beta-lactâmicos e macrolídeos, devido ao grande espectro de proteção conferidos por esses genes. 
