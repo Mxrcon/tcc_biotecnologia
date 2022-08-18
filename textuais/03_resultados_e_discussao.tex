@@ -21,7 +21,7 @@ As qualidades médias das sequências pode ser observada a partir dos gráficos 
 	\centering
 	\includegraphics[width=0.8\linewidth]{imagens/read\_qc/002merged.png} \\
 	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+    \begin{small}\textbf{Fonte: autoria prória}\end{small}
 \end{figure}
 \vspace{\floatsep}
 \begin{figure}[H]
@@ -29,7 +29,7 @@ As qualidades médias das sequências pode ser observada a partir dos gráficos 
 	\centering
 	\includegraphics[width=0.8\linewidth]{imagens/read\_qc/004merged.png} \\
 	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+    \begin{small}\textbf{Fonte: autoria prória}\end{small}
 \end{figure}
 \vspace{\floatsep}
 
@@ -48,9 +48,9 @@ removendo sequências abaixo de PHRED 20 $($ que representa probabilidade de err
 	\begin{tabular}{lllll}
 		
 		\toprule
-		& \multicolumn{3}{l}{Nome das montagens}                                                                                                                       &                                 \\
+		\textbf{Estatística} & \multicolumn{3}{l}{Nome das montagens}                                                                                                                       &                                 \\
 		\cmidrule{2-5}
-		\textbf{Estatística}                         & \textbf{bactopia+skesa} & \textbf{bactopia+spades} & \textbf{manual mais kmers} & \textbf{manual+spadess}\\
+		                         & \textbf{bactopia+skesa} & \textbf{bactopia+spades} & \textbf{manual mais kmers} & \textbf{manual+spadess}\\
 		\midrule
 		Número de contigs                            & 2893                                   & 2859                                    & 267                               & 211                                         \\
 		Número de contigs (\textgreater{}= 0 bp)     & 2893                                   & 2859                                    & 373                               & 314                                        \\
@@ -77,7 +77,7 @@ removendo sequências abaixo de PHRED 20 $($ que representa probabilidade de err
     \end{tabular}
 	}{%
 	\centering
-	\fonte{Produzido pelo autor.}%%
+	\fonte{autoria prória}%%
 	  }
 \end{table}
 
@@ -96,9 +96,9 @@ com o descrito por \citeonline{yadav2018} para Actinomicetos.
 	\begin{tabular}{lllll}
 		
 		\toprule
-		& \multicolumn{3}{l}{Nome das montagens}                                                                                                                       &                                 \\
+		\textbf{Estatística} & \multicolumn{3}{l}{Nome das montagens}                                                                                                                       &                                 \\
 		\cmidrule{2-5}
-		\textbf{Estatística}                         & \textbf{bactopia+skesa} & \textbf{bactopia+spades} & \textbf{manual mais kmers} & \textbf{manual+spadess}\\
+		                         & \textbf{bactopia+skesa} & \textbf{bactopia+spades} & \textbf{manual mais kmers} & \textbf{manual+spadess}\\
 		\midrule
         Número de contigs (\textgreater{}= 0 bp)     & 1359    & 1356    & 174     & 145     \\
         Número de contigs (\textgreater{}= 1000 bp)  & 1184    & 1179    & 89      & 86      \\
@@ -124,10 +124,9 @@ com o descrito por \citeonline{yadav2018} para Actinomicetos.
     \end{tabular}
 	}{%
 	\centering
-	\fonte{ Produzido pelo autor.}%%
+	\fonte{ autoria prória}%%
 	  }
 \end{table}
-
 
 
 
@@ -157,16 +156,54 @@ e 1 busco faltando, com o percentual de $98,4$ \% também foi considerada sufici
 o software PROKKA foi capaz de predizer 5738 CDSs para a amostra 016 e 6082 CDS para a amostra 094, contendo genes
 de diversas funções celulares. 
 
+\begin{figure}[H]
+	\caption{Gráficos representando a montagem do cromossomo da amostra 016}
+	\label{fig:genoma16}
+	\centering
+	\includegraphics[width=0.8\linewidth]{imagens/genome/002.png} \\
+	\centering
+	\legend{Genes na direção \textit{foward} $($ roxo $)$,
+	Genes na direção \textit{reverse} $($ azul claro $)$, \textit{clusters} gênicos $($ rosa $)$,
+	qualidade da montagem $($ em cinza a montagem e em vermelho os \textit{gaps} da montagem $)$ e internamente 
+	um gráfico representando a variação de conteúdo G$+$C $($ amarelo quando maior que 50\% e roxo quando menor$)$ e
+	mais internamente um gráfico representando o valor de G$+$C}
+    \begin{small}\textbf{Fonte: autoria prória}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+\begin{figure}[H]
+	\caption{Gráficos representando a montagem do cromossomo da amostra 094}
+	\label{fig:genoma94}
+	\centering
+	\legend{Genes na direção \textit{foward} $($ roxo $)$,
+	Genes na direção \textit{reverse} $($ azul claro $)$, \textit{clusters} gênicos $($ rosa $)$,
+	qualidade da montagem $($ em cinza a montagem e em vermelho os \textit{gaps} da montagem $)$ e internamente 
+	um gráfico representando a variação de conteúdo G$+$C $($ amarelo quando maior que 50\% e roxo quando menor$)$ e
+	mais internamente um gráfico representando o valor de G$+$C}
+	\includegraphics[width=0.8\linewidth]{imagens/genome/004.png} \\
+	\centering
+    \begin{small}\textbf{Fonte: autoria prória}\end{small}
+\end{figure}
+\vspace{\floatsep}
+
+
+Através dessa visualização, podemos observar a sobreposição de alguns clusters gênicos com áreas
+de \textit{gaps} na montagem, o que não desqualifica a predição desses clusters mas pode levar
+a uma baixa identidades ou ausência de componentes nos clusters como genes acessórios importantes
+para a síntese. O aprimoramento da montagem se faz necessário para o depósito desses genomas em 
+bancos de dados de montagens. Esse pode ter sido um dos motivos para a baixa identificação dos
+cluster na amostra 016.
+
 \section{Predição de \textit{BGCs} e resistência a antimicrobianos}
 
-Para a amostra 016, o software Antishmash foi capaz de identificar 16 cluster biosintéticos completos, porém
+Para a amostra 016, o software antishmash foi capaz de identificar 16 cluster biossintéticos completos, porém
 apenas um cluster foi predito com 75\% de similaridade para produção de ectoína, um produto biosintético
-conhecido e produzido por uma ampla gama de bactérias gram positivas e negativas \cite{toveken2011specialized}.
+conhecido e produzido por uma ampla gama de bactérias gram positivas e negativas \cite{stoveken2011specialized}.
 Além disso, através da ferramenta armfinder foi observada a presença de genes codificando uma beta-lactamase de classe A e uma proteína de
-proteção ribossomal ABC-F. A presença desses genes, pode indicar a resistência desse microorganismo a antibióticos beta-lactâmicos
+proteção ribossomal ABC-F. A presença desses genes, pode indicar a resistência desse microrganismo a antibióticos beta-lactâmicos
 e a macrolídeos.  
 
-Já a amostra 094, teve 15 cluster biosintéticos preditos, dentro os quais 4 tiveram sua função identificada
+Já a amostra 094, teve 15 cluster biossintéticos preditos, dentro os quais 4 tiveram sua função identificada
 por similaridade sendo produtores das seguintes substâncias e identidades percentuais: petrobactina$($83\%$)$, 
 tyrocidina$($81\%$)$, gramicidina$($91\%$)$ e macrobrevina ($($100\%$)$). 
 
@@ -177,7 +214,7 @@ tyrocidina$($81\%$)$, gramicidina$($91\%$)$ e macrobrevina ($($100\%$)$).
 	\centering
 		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao1.png} \\
 	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+    \begin{small}\textbf{Fonte: autoria prória}\end{small}
 \end{figure}
 \vspace{\floatsep}
 
@@ -191,7 +228,7 @@ capaz de produzir petrobactina, contém uma proteína de resistência tipo A a v
 	\centering
 		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao2.png} \\
 	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+    \begin{small}\textbf{Fonte: autoria prória}\end{small}
 \end{figure}
 \vspace{\floatsep}
 
@@ -201,7 +238,7 @@ capaz de produzir petrobactina, contém uma proteína de resistência tipo A a v
 	\centering
 		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao3.png} \\
 	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+    \begin{small}\textbf{Fonte: autoria prória}\end{small}
 \end{figure}
 \vspace{\floatsep}
 
@@ -219,7 +256,7 @@ descrição de suas estruturas através da técnica de espectometria de massa.
 	\centering
 		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao4.png} \\
 	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
+    \begin{small}\textbf{Fonte: autoria prória}\end{small}
 \end{figure}
 \vspace{\floatsep}
 
@@ -233,7 +270,7 @@ estudos de purificação e descrição das estruturas desses compostos.
 
 Diferentemente, a amostra 094 apresenta 3 clusters identificados como produtores de produtos naturais com
 ativade antimicrobiana, o que deve ser confirmado através de ensaios elaborados que promovam a expressão
-desses genes e para sua posterior purificação. Esse microorganismo tem grande potêncial para descrição de 
+desses genes e para sua posterior purificação. Esse microrganismo tem grande potêncial para descrição de 
 produtos naturais com atividade antimicrobiana, apesar de serem de classes conhecidas. A elucidação dessas
 estruturas pode sugerir modificações em antibióticos derivados dessa substância, e também ajudar a complementar
 informações já existentes a respeito da produção de compostos de interesse biotecnológicos em \textit{Brevibacillus brevis}.
@@ -261,7 +298,7 @@ Kanamicinda, Tobramicina, streptomicina, lincossamida, macrolídeos, streptogram
 		\end{tabular}
 		}{%
 		 \centering
-		  \fonte{ Produzido pelo autor.}%
+		  \fonte{ autoria prória}%
 		  \legend{Informações obtidas a partir dos alinhamentos de sequência realizados pela
 		  ferramenta armfinder}%
 		  }
@@ -269,39 +306,3 @@ Kanamicinda, Tobramicina, streptomicina, lincossamida, macrolídeos, streptogram
 
 Os alinhamentos demonstram a presença de vários genes relacionados a resistência, inclusive a classes inteiras de antibióticos 
 como beta-lactâmicos e macrolídeos, devido ao grande espectro de proteção conferidos por esses genes. 
-
-\section{Estrutura final dos genomas}
-
-\begin{figure}[H]
-	\caption{Gráficos representando a montagem do cromossomo da amostra 016}
-	\label{fig:genoma16}
-	\centering
-	\includegraphics[width=0.8\linewidth]{imagens/genome/002.png} \\
-	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
-\end{figure}
-\vspace{\floatsep}
-
-\begin{figure}[H]
-	\caption{Gráficos representando a montagem do cromossomo da amostra 094}
-	\label{fig:genoma94}
-	\centering
-	\includegraphics[width=0.8\linewidth]{imagens/genome/004.png} \\
-	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
-\end{figure}
-\vspace{\floatsep}
-
-As figuras \ref{genoma16}\ref{genoma94} representam as montagens completas dos genomas, sendo
-os círculos do mais exterior para interior: Genes na direção \textit{foward} $($ roxo $)$,
-Genes na direção \textit{reverse} $($ azul claro $)$, \textit{clusters} gênicos $($ rosa $)$,
-qualidade da montagem $($ em cinza a montagem e em vermelho os \textit{gaps} da montagem $)$ e internamente 
-um gráfico representando a variação de conteúdo G$+$C $($ amarelo quando maior que 50\% e roxo quando menor$)$ e
-mais internamente um gráfico representando o valor de G$+$C. 
-
-Através dessa visualização, podemos observar a sobreposição de alguns clusters gênicos com áreas
-de \textit{gaps} na montagem, o que não desqualifica a predição desses clusters mas pode levar
-a uma baixa identidades ou ausência de componentes nos clusters como genes acessórios importantes
-para a síntese. O aprimoramento da montagem se faz necessário para o depósito desses genomas em 
-bancos de dados de montagens. Esse pode ter sido um dos motivos para a baixa identificação dos
-cluster na amostra 016.
