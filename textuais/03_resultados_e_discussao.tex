@@ -40,6 +40,45 @@ removendo sequências abaixo de PHRED 20 $($ que representa probabilidade de err
 
 
 \section{Montagem das \textit{contigs}}
+\begin{table}[htb]
+	\IBGEtab{%
+	  \caption{Report do software QUAST para as montagens da amostra 016}%
+	  \label{tabela-quast016}
+	}{%
+	\begin{tabular}{llllll}
+		\toprule
+		& \multicolumn{4}{l}{Nome das montagens}                                                                                                                       &                                 \\
+		\toprule
+		\textbf{Estatística}                         & \textbf{016\_bactopia\_skesa\_contigs} & \textbf{016\_bactopia\_spades\_contigs} & \textbf{016\_manual\_more\_kmers} & \textbf{016\_manual\_spades\_contigs} & 016\_bactopia\_spades2\_contigs \\
+		\midrule
+		Número de contigs                            & 2893                                   & 2859                                    & 267                               & 211               & 1073                            \\
+		Número de contigs (\textgreater{}= 0 bp)     & 2893                                   & 2859                                    & 373                               & 314               & 1073                            \\
+		Número de contigs (\textgreater{}= 1000 bp)  & 2088                                   & 2069                                    & 241                               & 189               & 976                             \\
+		Número de contigs (\textgreater{}= 5000 bp)  & 154                                    & 162                                     & 185                               & 146               & 471                             \\
+		Número de contigs (\textgreater{}= 10000 bp) & 9                                      & 9                                       & 148                               & 119               & 195                             \\
+		Número de contigs (\textgreater{}= 25000 bp) & 0                                      & 0                                       & 90                                & 80                & 15                              \\
+		Número de contigs (\textgreater{}= 50000 bp) & 0                                      & 0                                       & 31                                & 40                & 0                               \\
+		Maior contig                                 & 12514                                  & 12514                                   & 168716                            & 222317                                & 41308                           \\
+		Comprimento total                            & 5931701                                & 5931691                                 & 6431423                           & 6438566                               & 6487418                         \\
+		Comprimento total (\textgreater{}= 0 bp)     & 5931701                                & 5931691                                 & 6458455                           & 6467051                               & 6487418                         \\
+		Comprimento total (\textgreater{}= 1000 bp)  & 5340891                                & 5350903                                 & 6413515                           & 6424096                               & 6418042                         \\
+		Comprimento total (\textgreater{}= 5000 bp)  & 1013529                                & 1063244                                 & 6277148                           & 6315422                               & 5074604                         \\
+		Comprimento total (\textgreater{}= 10000 bp) & 100586                                 & 100586                                  & 5997032                           & 6110524                               & 3102397                         \\
+		Comprimento total (\textgreater{}= 25000 bp) & 0                                      & 0                                       & 5023485                           & 5423825                               & 468443                          \\
+		Comprimento total (\textgreater{}= 50000 bp) & 0                                      & 0                                       & 2903777                           & 4003427                               & 0                               \\
+		N50                                          & 2719                                   & 2758                                    & 46660                             & 84527                                 & 9684                            \\
+		N90                                          & 1002                                   & 1010                                    & 14230                             & 18884                                 & 2969                            \\
+		auN                                          & 3216.4                                 & 3258.2                                  & 61550                             & 78958                                 & 11552                           \\
+		L50                                          & 702                                    & 692                                     & 38                                & 29                                    & 210                             \\
+		L90                                          & 2086                                   & 2057                                    & 130                               & 97                                    & 667                             \\
+		GC (\%)                                      & 68.06                                  & 68.05                                   & 68.09                             & 68.08                                 & 68.1                            \\
+	\bottomrule
+    \end{tabular}
+	}{%
+	  \fonte{Produzido pelo autor.}%
+	  \legend{Informações obtidas a partir dos resultados do avaliador de montagem quast para a amostra 016}%
+	  }
+\end{table}
 
 \begin{figure}[H]
 	\caption{Report do software QUAST para as montagens da amostra 016}
@@ -56,6 +95,7 @@ o montador spades junto com a correção do software shovill. Essa montagem foi 
 valor de L50 $($menor quantidade de contigs para atingir 50 \% do número de pares de base$)$ e maior 
 \textit{contig} em tamanho absoluto $($222 mil pares de base$)$. O conteúdo GC de 60 \% dessa montagem está de acordo
 com o descrito por \citeonline{yadav2018} para Actinomicetos.
+
 
 
 \begin{figure}[H]
@@ -185,7 +225,7 @@ Kanamicinda, Tobramicina, streptomicina, lincossamida, macrolídeos, streptogram
 		}{%
 		\begin{tabular}{ccccc}
 		 \toprule
-		 \textbf{CDS da \textit{query}} & \textbf{Abrev. do Gene} & \textbf{\% Cobertura} & \textbf{ Identidade $($\%$)$} & \textbf{Comprimento} \\
+		 \textbf{CDS da \textit{query}} & \textbf{Abrev. do Gene} & \textbf{Cobertura $($\%$)$} & \textbf{ Identidade $($\%$)$} & \textbf{Comprimento} \\
 		  \midrule 
 		  004\_01565                                    & catV                                          & 100.00                                                    & 94.52                                                      & 219                                                             \\
 		  004\_04575                                    & ant(4')-Ic                                    & 100.00                                                    & 93.36                                                      & 256                                                             \\
