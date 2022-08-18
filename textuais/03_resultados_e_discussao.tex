@@ -42,7 +42,7 @@ removendo sequências abaixo de PHRED 20 $($ que representa probabilidade de err
 \section{Montagem das \textit{contigs}}
 \begin{table}[htb]
 	\IBGEtab{%
-	  \caption{Report do software QUAST para as montagens da amostra 016}%
+	  \caption{Relatório do software QUAST para as montagens da amostra 016}%
 	  \label{tabela-quast016}
 	}{%
 	\begin{tabular}{lllll}
@@ -50,7 +50,7 @@ removendo sequências abaixo de PHRED 20 $($ que representa probabilidade de err
 		\toprule
 		& \multicolumn{3}{l}{Nome das montagens}                                                                                                                       &                                 \\
 		\cmidrule{2-5}
-		\textbf{Estatística}                         & \textbf{bactopia\_skesa} & \textbf{bactopia\_spades} & \textbf{manual\_more\_kmers} & \textbf{manual\_spadess}\\
+		\textbf{Estatística}                         & \textbf{bactopia\+skesa} & \textbf{bactopia+spades} & \textbf{manual mais kmers} & \textbf{manual+spadess}\\
 		\midrule
 		Número de contigs                            & 2893                                   & 2859                                    & 267                               & 211                                         \\
 		Número de contigs (\textgreater{}= 0 bp)     & 2893                                   & 2859                                    & 373                               & 314                                        \\
@@ -76,41 +76,61 @@ removendo sequências abaixo de PHRED 20 $($ que representa probabilidade de err
 	\bottomrule
     \end{tabular}
 	}{%
-	  \fonte{Produzido pelo autor.}%
-	  \legend{Informações obtidas a partir dos resultados do avaliador de montagem quast para a amostra 016}%
+	\caption{Fonte: Produzido pelo autor.}%%
 	  }
 \end{table}
 
-\begin{figure}[H]
-	\caption{Report do software QUAST para as montagens da amostra 016}
-	\label{fig:quast_16}
-	\centering
-		\includegraphics[width=0.8\linewidth]{imagens/assembly\_qc/016assembly.png} \\
-	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
-\end{figure}
-\vspace{\floatsep}
 
-A melhor montagem para a amostra ACT016 é a montagem \textit{manual\_spades} que foi feita utilizando
+A melhor montagem para a amostra ACT016 é a montagem \textit{manual\+spades} que foi feita utilizando
 o montador spades junto com a correção do software shovill. Essa montagem foi escolhida por ter o maior
 valor de L50 $($menor quantidade de contigs para atingir 50 \% do número de pares de base$)$ e maior 
 \textit{contig} em tamanho absoluto $($222 mil pares de base$)$. O conteúdo GC de 60 \% dessa montagem está de acordo
 com o descrito por \citeonline{yadav2018} para Actinomicetos.
 
+\begin{table}[htb]
+	\IBGEtab{%
+	  \caption{Relatório do software QUAST para as montagens da amostra 094}%
+	  \label{tabela-quast016}
+	}{%
+	\begin{tabular}{lllll}
+		
+		\toprule
+		& \multicolumn{3}{l}{Nome das montagens}                                                                                                                       &                                 \\
+		\cmidrule{2-5}
+		\textbf{Estatística}                         & \textbf{bactopia\+skesa} & \textbf{bactopia+spades} & \textbf{manual mais kmers} & \textbf{manual+spadess}\\
+		\midrule
+        Número de contigs (\textgreater{}= 0 bp)     & 1359    & 1356    & 174     & 145     \\
+        Número de contigs (\textgreater{}= 1000 bp)  & 1184    & 1179    & 89      & 86      \\
+        Número de contigs (\textgreater{}= 5000 bp)  & 445     & 442     & 77      & 74      \\
+        Número de contigs (\textgreater{}= 10000 bp) & 134     & 134     & 72      & 68      \\
+        Número de contigs (\textgreater{}= 25000 bp) & 4       & 5       & 58      & 54      \\
+        Número de contigs (\textgreater{}= 50000 bp) & 0       & 0       & 43      & 40      \\
+        Maior contig                                 & 47444   & 47444   & 426847  & 506270  \\
+        Comprimento total                            & 6192419 & 6192418 & 6366868 & 6368789 \\
+        Comprimento total (\textgreater{}= 0 bp)     & 6192419 & 6192418 & 6385784 & 6381692 \\
+        Comprimento total (\textgreater{}= 1000 bp)  & 6061227 & 6059168 & 6360679 & 6362541 \\
+        Comprimento total (\textgreater{}= 5000 bp)  & 4118533 & 4120357 & 6335651 & 6338367 \\
+        Comprimento total (\textgreater{}= 10000 bp) & 1956669 & 1976108 & 6300503 & 6297106 \\
+        Comprimento total (\textgreater{}= 25000 bp) & 132715  & 167349  & 6074220 & 6061343 \\
+        Comprimento total (\textgreater{}= 50000 bp) & 0       & 0       & 5525199 & 5538539 \\
+        N50                                          & 7064    & 7067    & 140750  & 154727  \\
+        N90                                          & 2188    & 2176    & 41752   & 41705   \\
+        auN                                          & 8683.7  & 8819.3  & 155188  & 173136  \\
+        L50                                          & 272     & 269     & 16      & 14      \\
+        L90                                          & 871     & 869     & 48      & 45      \\
+        GC (\%)                                      & 47.27   & 47.27   & 47.19   & 47.2   \\
+	\bottomrule
+    \end{tabular}
+	}{%
+	\caption{Fonte: Produzido pelo autor.}%%
+	  }
+\end{table}
 
 
-\begin{figure}[H]
-	\caption{Report do software QUAST para as montagens da amostra 094}
-	\label{fig:quast_16}
-	\centering
-		\includegraphics[width=0.8\linewidth]{imagens/assembly\_qc/094assembly.png} \\
-	\centering
-    \begin{small}\textbf{Fonte: O Autor (2022)}\end{small}
-\end{figure}
-\vspace{\floatsep}
 
-De maneira similar, a melhor montagem para a amostra 094 também é a montagem \textit{manual\_spades}.
-possuindo um valor similar a montagem \textit{more\_kmers} porém se diferenciando por possuir a maior \textit{contig}
+
+De maneira similar, a melhor montagem para a amostra 094 também é a montagem \textit{manual\+spades}.
+possuindo um valor similar a montagem \textit{manual mais kmers} porém se diferenciando por possuir a maior \textit{contig}
 com aproximadamente 80 mil pares de base a mais, um fator muito relevante para a posterior montagem do genoma completo.
 O conteúdo GC também está de acordo com valores comumente encontrados em \textit{Brevibacillus brevis} \cite{nakamura1991bacillus}.
 
@@ -238,7 +258,7 @@ Kanamicinda, Tobramicina, streptomicina, lincossamida, macrolídeos, streptogram
 		  \bottomrule
 		\end{tabular}
 		}{%
-		  \fonte{Produzido pelo autor.}%
+		  \caption{Fonte: Produzido pelo autor.}%
 		  \legend{Informações obtidas a partir dos alinhamentos de sequência realizados pela
 		  ferramenta armfinder}%
 		  }
