@@ -1,8 +1,9 @@
 \chapter{Metodologia}
 \section{Seleção de amostras}
-Foram selecionados 2 microorganismos de espécies diferentes do banco de amostras ambientais provenientes
-do parque estadual Utinga - Belém, PA gentilmente disponibilizadas pelo Centro de Gênomica e Biologia de Sistemas.
-Incluindo uma actinobactéria do gênero \textit{Rhodococcus} (ACT016) e e uma bactéria do filo \textit{Firmicutes}: \textit{Brevibacillus brevis}(ACT094).
+
+Diante da importância biotecnologia dos microrganismos citado anteriormente, 
+para a exploração genômica foram selecionadas duas cepas do parque estadual Utinga - Belém, PA gentilmente disponibilizadas pelo Centro de Gênomica e Biologia de Sistemas.
+Incluindo uma actinobactéria do gênero \textit{Rhodococcus} (ACT\_016) e e uma bactéria do filo \textit{Firmicutes}: \textit{Brevibacillus brevis}(FIR\_094).
 Essa amostras foram previamente identificadas utilizando sequênciamento do gene de RNA ribossomal 16s
 utilizando os primers universais 8F: 5'-AGAGTTTGATCATGGCTCAG-3' e 1492R: 5'-CGGTTACCTTGTTACGACTT-3' com o sequenciador 
 ABI Prism 3500 Genetic Analyzer (Applied BioSystems). Posteriormente as espécies foram preditas utilizando
@@ -18,19 +19,19 @@ As bibliotecas foram preparadas utilizando o protocolo do fabricante e sequencia
 Ion GeneStudio S5 Plus (Thermo Fisher)
 
 \section{Análise Genômica}
-O pipeline Bactopia, filtrou as leituras, montou e anotou o genoma automaticamente.
-Paralelamente, as amostras foram filtradas manualmente utilizando a ferramenta Trimmomatic
+O pipeline Bactopia \cite{Bactopia}, filtrou as leituras, montou e anotou o genoma automaticamente.
+Paralelamente, as amostras foram filtradas manualmente utilizando a ferramenta Trimmomatic \cite{bolger2014trimmomatic}
 utilizando os seguintes parâmetros: "LEADING:3 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36"
-e foram realizadas montagens manuais utilizando o software shovill com os montadores SKESA e SPADES utilizando
+e foram realizadas montagens manuais utilizando o software shovill com os montadores SKESA\cite{souvorov2018skesa} e SPADES\cite{bankevich2012spades} utilizando
 parâmetros automáticos e kmers específicos (21,33,55,77,99,127).
-As melhores montagens foram selecionadas após visualização da qualidade no software QUAST. 
-Após isso as melhores montagens foram submetidas ao programa KRAKEN para determinar a pureza
+As melhores montagens foram selecionadas após visualização da qualidade no software QUAST \cite{gurevich2013quast}. 
+Após isso as melhores montagens foram submetidas ao programa KRAKEN \cite{wood2019improved} para determinar a pureza
 das montagens e predição de espécies. Posteriormente os genomas foram montados em um único cromossomo
-utilizando o software RAGOUT utilizando genomas de referência proximos a espécie predita pelo KRAKEN, 
-a pureza das montagens foi verificada utilizando o software BUSCO.
+utilizando o software RAGOUT\cite{kolmogorov2014ragout} utilizando genomas de referência proximos a espécie predita pelo KRAKEN, 
+a pureza das montagens foi verificada utilizando o software BUSCO\cite{simao2015busco}.
 
 Finalmente os genomas foram anotados utilizando o software
-PROKKA, seus genes de resistência a antibióticos foram preditos utilizando o software armfinder e seus clusters de metabólitos
-secundários foram preditos utilizando a ferramenta ANTISMASH.
+PROKKA \cite{seemann2014prokka} , seus genes de resistência a antibióticos foram preditos utilizando o software armfinder e seus clusters de metabólitos
+secundários foram preditos utilizando a ferramenta ANTISMASH\cite{blin2021antismash}.
 
-Foram utilizados os softwares fastqc e Artemis para criação de figuras a partir dos dados gerados.
+Foram utilizados os softwares fastqc\cite{andrews2019fastqc} e Artemis\cite{carver2012artemis} para criação de figuras a partir dos dados gerados.
