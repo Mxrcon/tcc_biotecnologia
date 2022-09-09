@@ -4,10 +4,9 @@
 Diante da importância biotecnologia dos microrganismos citado anteriormente, 
 para a exploração genômica foram selecionadas duas cepas do parque estadual Utinga - Belém, PA gentilmente disponibilizadas pelo Centro de Gênomica e Biologia de Sistemas.
 Incluindo uma actinobactéria do gênero \textit{Rhodococcus} (ACT\_016) e e uma bactéria do filo \textit{Firmicutes}: \textit{Brevibacillus brevis}(FIR\_094).
-Essa amostras foram previamente identificadas utilizando sequênciamento do gene de RNA ribossomal 16s
+Essa amostras foram previamente identificadas utilizando sequenciamento do gene de RNA ribossomal 16s
 utilizando os primers universais 8F: 5'-AGAGTTTGATCATGGCTCAG-3' e 1492R: 5'-CGGTTACCTTGTTACGACTT-3' com o sequenciador 
-ABI Prism 3500 Genetic Analyzer (Applied BioSystems). Posteriormente as espécies foram preditas utilizando
-homologia baseada no alinhamento contra o banco de dados de RNA ribossomal do NCBI utilizando a ferramenta
+ABI Prism 3500 Genetic Analyzer (Applied BioSystems) e alinhamento contra o banco de dados de RNA ribossomal do NCBI utilizando a ferramenta
 blast.
 
 \section{Extração de DNA e sequenciamento}
@@ -22,7 +21,7 @@ Ion GeneStudio S5 Plus (Thermo Fisher)
 O pipeline Bactopia \cite{Bactopia}, filtrou as leituras, montou e anotou o genoma automaticamente.
 Paralelamente, as amostras foram filtradas manualmente utilizando a ferramenta Trimmomatic \cite{bolger2014trimmomatic}
 utilizando os seguintes parâmetros: "LEADING:3 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36"
-e foram realizadas montagens manuais utilizando o software Shovill $($ não publicado $)$ com os 
+e foram realizadas montagens manuais utilizando o software Shovill $($ disponivel em \url{https://github.com/tseemann/shovill} $)$ com os 
 montadores SKESA\cite{souvorov2018skesa} e SPADES\cite{bankevich2012spades} utilizando
 parâmetros automáticos e kmers específicos (21,33,55,77,99,127).
 As melhores montagens foram selecionadas após visualização da qualidade no software QUAST \cite{gurevich2013quast}. 

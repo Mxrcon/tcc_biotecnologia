@@ -2,15 +2,15 @@
 
 \section{Sequenciamento e controle de qualidade das leituras}
 Após o sequenciamento das amostras, foram obtidas 7.8 milhões de leituras de tamanho médio de 
-223 pares de base para a amostra ACT016 e 7.4 milhões de leituras com tamanho médio de 222 pares de base
-para a amostra FIR\_094. Após a filtrar as leituras utilizando a ferramenta Trimmomatic, retivemos
-6.2 milhões de leituras com tamanho médio 113 pares de base \(perda 21,5\%\) para ACT016 e 6.1 milhões
+223 pares de base para a amostra \textit{Rhodococcus} ACT\_016 e 7.4 milhões de leituras com tamanho médio de 222 pares de base
+para a amostra \textit{Brevibacillus brevis} FIR\_094. Após a filtrar as leituras utilizando a ferramenta Trimmomatic, retivemos
+6.2 milhões de leituras com tamanho médio 113 pares de base \(perda 21,5\%\) para ACT\_016 e 6.1 milhões
 de leituras com tamanho médio 145 pares de base\(perda de 18,5\%\).
 
 Baseando-se num tamanho de genoma variável de 3 a 10 milhões de bases para \textit{Rhodococcus}, podemos
 determinar a cobertura real estimada pela fórmula $C= (L\cdot N)/G $ sendo $C$ a cobertura, $L$ o comprimento
-médio das reads e $G$ o tamanho do genoma. A partir disso, obtivemos que a cobertura para a amostra ACT016 Após
-filtrar as leituras está entre $70$ e $233,53$ vezes. 
+médio das reads e $G$ o tamanho do genoma.
+ A partir disso, obtivemos que a cobertura para a amostra ACT016 após filtrar as leituras está entre $70$ e $233,53$ vezes. 
 Para a amostra FIR\_094, consideramos o tamanho do genoma de referência de \textit{Brevibacillus Brevis}$($NZ\_LR134338$)$ 
 de 6.2 milhões de bases e estimamos a cobertura em aproximadamente $142,66$ vezes.
 
@@ -37,7 +37,7 @@ As qualidades médias das sequências pode ser observada a partir dos gráficos 
 \end{figure}
 \vspace{\floatsep}
 
-A partir desses gráficos podemos observar a perda de qualidade no final das leituras, um tipo de limitação
+A partir dos gráficos acima podemos observar a perda de qualidade no final das leituras brutas, um tipo de limitação
 técnica comum ao utilizar sequenciadores da plataforma \textit{Illumina}, porém o término em baixa qualidade
 pode ser removido após a filtração, tendo uma qualidade média ao longo da sequência próximo de PHRED 26 e
 removendo sequências abaixo de PHRED 20 $($ que representa probabilidade de erro maior que 1 em 100$)$.
@@ -142,26 +142,26 @@ O conteúdo GC também está de acordo com valores comumente encontrados em \tex
 
 
 Os melhores conjuntos de \textit{contigs} montadas foram submetidas ao software KRAKEN2 para predição de espécie,
-para a amostra 016 a espécie predita foram \textit{Rhodococcus} com $71,66$ \% de \textit{contigs} identificadas, mas importunamente
-$18,45$ \% das \textit{contigs} não foram identificadas, determinando que a amostra 016 foi predita como \textit{Rhodococcus}
+para a amostra \textit{Rhodococcus} ACT\_016 a espécie predita foram \textit{Rhodococcus} com $71,66$ \% de \textit{contigs} identificadas, mas importunamente
+$18,45$ \% das \textit{contigs} não foram identificadas, determinando que a amostra \textit{Rhodococcus} ACT\_016 foi predita como \textit{Rhodococcus}
 não identificado. A partir desse resultado o genoma de referência sugerido para a montagem foi o de código
 de acesso NZ\_CP054690 da cepa \textit{Rhodococcus sp. W8901}. 
 
-Para a amostra 094, $85.52$ \% das \textit{contigs} foram preditas como \textit{Brevibacillus brevis}
+Para a amostra \textit{Brevibacillus brevis} FIR\_094, $85.52$ \% das \textit{contigs} foram preditas como \textit{Brevibacillus brevis}
 concordando com os resultados previamente obtidos a partir de sequenciamento de sanger. O genoma NZ\_CP030117
 da cepa \textit{DZQ7} referência para montagem de genomas dessa espécie.
 
 As montagens utilizando genomas de referência escolhidos, foram avaliadas quanto a presença de genes 
-ortólogos. Na amostra 016 foram encontrados 120 BUSCOs completos e únicos, 2 genes completos e duplicados e 2 genes fragmentados,
+ortólogos. Na amostra \textit{Rhodococcus} ACT\_016 foram encontrados 120 BUSCOs completos e únicos, 2 genes completos e duplicados e 2 genes fragmentados,
  o valor de genes completos únicos de 98\% foi considerada satisfatória para a montagem e de pureza suficiente para
-a anotação do genoma. Já na amostra 094, 121 BUSCOs completos e únicos foram encontrados, 1 gene completo e duplicado, 1 busco fragmentado
+a anotação do genoma. Já na amostra \textit{Brevibacillus brevis} FIR\_094, 121 BUSCOs completos e únicos foram encontrados, 1 gene completo e duplicado, 1 busco fragmentado
 e 1 busco faltando, com o percentual de $98,4$ \% também foi considerada suficiente para prosseguimento da anotação.
 
-o software PROKKA foi capaz de predizer 5738 CDSs para a amostra 016 e 6082 CDS para a amostra 094, contendo genes
+o software PROKKA foi capaz de predizer 5738 CDSs para a amostra \textit{Rhodococcus} ACT\_016 e 6082 CDS para a amostra \textit{Brevibacillus brevis} FIR\_094, contendo genes
 de diversas funções celulares. 
 
 \begin{figure}[H]
-	\caption{Gráficos representando a montagem do cromossomo da amostra 016}
+	\caption{Gráficos representando a montagem do cromossomo da amostra ACT\_016}
 	\label{fig:genoma16}
 	\centering
 	\includegraphics[width=0.8\linewidth]{imagens/genome/002.png} \\
@@ -176,7 +176,7 @@ de diversas funções celulares.
 \vspace{\floatsep}
 
 \begin{figure}[H]
-	\caption{Gráficos representando a montagem do cromossomo da amostra 094}
+	\caption{Gráficos representando a montagem do cromossomo da amostra FIR\_094}
 	\label{fig:genoma94}
 	\centering
 	\includegraphics[width=0.8\linewidth]{imagens/genome/004.png} \\
@@ -213,7 +213,7 @@ tyrocidina$($81\%$)$, gramicidina$($91\%$)$ e macrobrevina ($($100\%$)$).
 
 
  \begin{figure}[H]
-	\caption{\textit{Cluster biosintético} para produção de petrobactina na amostra 094}
+	\caption{\textit{Cluster biosintético} para produção de petrobactina na amostra FIR\_094}
 	\label{fig:quast_16}
 	\centering
 		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao1.png} \\
@@ -223,11 +223,11 @@ tyrocidina$($81\%$)$, gramicidina$($91\%$)$ e macrobrevina ($($100\%$)$).
 \vspace{\floatsep}
 
 A petrobactina é um sideróforo com protoreatividade capaz de reduzir ferro $III$ em 
-ferro $II$\cite{barbeau2002petrobactin}. Interessantemente o cluster presente na amostra 94
+ferro $II$\cite{barbeau2002petrobactin}. Interessantemente o cluster presente na amostra \textit{Brevibacillus brevis} FIR\_094
 capaz de produzir petrobactina, contém uma proteína de resistência tipo A a vancomicina e teicoplanina.
 
 \begin{figure}[H]
-	\caption{\textit{Cluster biosintético} para produção de tirocidina na amostra 094}
+	\caption{\textit{Cluster biosintético} para produção de tirocidina na amostra FIR\_094}
 	\label{fig:quast_16}
 	\centering
 		\includegraphics[width=0.8\linewidth]{imagens/antismash/094regiao2.png} \\
@@ -265,14 +265,14 @@ descrição de suas estruturas através da técnica de espectometria de massa.
 \vspace{\floatsep}
 
 O cluster de produção para macrobrevina foi o único encontrado com 100\% de similaridade na amostra
-094, esse antibiótico com estrutura incomum derivado de uma trans-aciltransferase policetídeo sintase foi inicialmente isolado
+\textit{Brevibacillus brevis} FIR\_094, esse antibiótico com estrutura incomum derivado de uma trans-aciltransferase policetídeo sintase foi inicialmente isolado
 a partir de \textit{Brevibacillus sp.} associados ao microbioma de plantas \cite{helfrich2018bipartite}.
 
 A amostra 016 apresenta diversos \textit{cluster} e através de métodos computacionais utilizando bancos
 de dados extensos não fomos capazes de predizer a função desses clusters, o que ressalta a importância de 
 estudos de purificação e descrição das estruturas desses compostos.
 
-Diferentemente, a amostra 094 apresenta 3 clusters identificados como produtores de produtos naturais com
+Diferentemente, a amostra \textit{Brevibacillus brevis} FIR\_094 apresenta 3 clusters identificados como produtores de produtos naturais com
 ativade antimicrobiana, o que deve ser confirmado através de ensaios elaborados que promovam a expressão
 desses genes e para sua posterior purificação. Esse microrganismo tem grande potêncial para descrição de 
 produtos naturais com atividade antimicrobiana, apesar de serem de classes conhecidas. A elucidação dessas
@@ -309,6 +309,6 @@ Kanamicinda, Tobramicina, streptomicina, lincossamida, macrolídeos, streptogram
 		\end{table}
 
 Os alinhamentos demonstram a presença de vários genes relacionados a resistência, inclusive a classes inteiras de antibióticos 
-como beta-lactâmicos e macrolídeos, devido ao grande espectro de proteção conferidos por esses genes. 
+como beta-lactâmicos e macrolídios, devido ao grande espectro de proteção conferidos por esses genes. 
 
 
