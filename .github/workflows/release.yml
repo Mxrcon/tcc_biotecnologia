@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
           clean: false
-          ref: main
+          ref: ${{github.ref_name}}
       - name: Build Changelog
         id: build_changelog
         uses: Bullrich/generate-release-changelog@master
